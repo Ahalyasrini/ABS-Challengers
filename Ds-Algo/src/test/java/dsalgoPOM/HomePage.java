@@ -20,7 +20,8 @@ public class HomePage{
  
  public void goTo()
  {
-	 driver.get("https://dsportalapp.herokuapp.com/");
+//	 driver.get("https://dsportalapp.herokuapp.com/");
+	 driver.get(DriverManager.url);
  }
  
  public String LoadPage()

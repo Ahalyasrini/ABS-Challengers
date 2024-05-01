@@ -17,6 +17,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverManager {
 	public static WebDriver driver;
+	public static String url;
 	/*private driverManager() {
 		//this.driver=driver;
 	}
@@ -40,7 +41,7 @@ public class DriverManager {
 		
 		FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\config\\globaldata.properties");
 		prop.load(fis);
-		String url = prop.getProperty("Url");
+		url = prop.getProperty("Url");
 	//	String browserName =prop.getProperty("browser");
 		
 		if(driver==null)
