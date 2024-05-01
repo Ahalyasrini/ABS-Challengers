@@ -42,7 +42,7 @@ Feature: DS Algo Sign in Page
   Scenario Outline: Signin page validation with valid username and valid password
     Given The  user land on DS Algo Sign in page
     When The user clicks login button after entering valid <UserName> and valid <PassWord>
-    Then The user should land in Data Structure Home Page
+    Then The user should land in Data Structure Home Page "You are logged in"
 
     Examples: 
       | UserName| PassWord |

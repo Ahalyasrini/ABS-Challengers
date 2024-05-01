@@ -31,8 +31,8 @@ public class LoginInpage {
 	 }
 	
 
-	 public void verifyContextMessage()  {
-		 System.out.println(driver.findElement(userName).getAttribute("validationMessage"));
+	 public String verifyContextMessage()  {
+		return  driver.findElement(userName).getAttribute("validationMessage");
 		
 	 }
 	 
@@ -51,15 +51,15 @@ public class LoginInpage {
 		 driver.findElement(passWord).sendKeys(passwrd);
 	 }
 	 
-	 public void AlertMsg() {
-		 System.out.println(driver.findElement(alertmsg).getText());
+	 public String AlertMsg() {
+		 return driver.findElement(alertmsg).getText();
 	 }
 	 public void ValidenterUserNamePassWrd(String name,String passwrd) {
 		 driver.findElement(userName).sendKeys(name);
 		 driver.findElement(passWord).sendKeys(passwrd);
 	 }
-	  public void validatemessage() {
-		  System.out.println(driver.findElement(loginmsg).getText());
+	  public String validatemessage() {
+		  return driver.findElement(loginmsg).getText();
 	  }
 	 }
 

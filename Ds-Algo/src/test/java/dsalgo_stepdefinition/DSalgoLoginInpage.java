@@ -31,7 +31,10 @@ public class DSalgoLoginInpage extends DriverManager {
 
 	@Then("The error message {string} appears below Username textbox")
 	public void the_error_message_appears_below_username_textbox2(String string) {
-	    login.verifyContextMessage();
+	   String contextmessage= login.verifyContextMessage();
+	   System.out.println(contextmessage);
+	   Assert.assertEquals(contextmessage, string);
+	  	
 	}
 
 	@Given("user is on the DS Algo Sign in Page")
@@ -66,7 +69,10 @@ public class DSalgoLoginInpage extends DriverManager {
 	   }
 	@Then("The error message {string} appears below username textbox")
 	public void the_error_message_appears_below_username_textbox(String string) {
-	  login.verifyContextMessage();
+		 String contextmsg=  login.verifyContextMessage();
+		 System.out.println(contextmsg);
+		 System.out.println(string);
+		   Assert.assertEquals(contextmsg, string);
 	}
 
 	@Given("user lands on DS Algo Sign in page")
@@ -83,7 +89,9 @@ public class DSalgoLoginInpage extends DriverManager {
 
 	@Then("The error message {string}. appears below Username textbox")
 	public void the_error_message_appears_below_username_textbox1(String string) {
-		login.AlertMsg();
+		String alertmsg=login.AlertMsg();
+		System.out.println(alertmsg);
+		Assert.assertEquals(alertmsg, string);
 	    
 	}
 
@@ -98,9 +106,11 @@ public class DSalgoLoginInpage extends DriverManager {
 		login.clicklogin();
 	}
 
-	@Then("The user should land in Data Structure Home Page")
-	public void the_user_should_land_in_data_structure_home_page() {
-	    login.validatemessage();
+	@Then("The user should land in Data Structure Home Page {string}")
+	public void the_user_should_land_in_data_structure_home_page(String string) {
+	   String validmsg= login.validatemessage();
+	   System.out.println(validmsg);
+	   Assert.assertEquals(validmsg, string);
 	  
 	}
 
