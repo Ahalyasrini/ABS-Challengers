@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-30T11:48:29 EDT" name="Default suite" finished-at="2024-04-30T11:48:43 EDT" duration-ms="13203">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2024-04-30T11:48:29 EDT" name="Default test" finished-at="2024-04-30T11:48:43 EDT" duration-ms="13203">
+      <class name="dsalgo_stepdefinition.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-04-30T11:48:29 EDT" name="setUpClass" finished-at="2024-04-30T11:48:30 EDT" duration-ms="696" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@268c030f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-04-30T11:48:30 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-30T11:48:34 EDT" duration-ms="3845" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Open the browser"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Browser page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-04-30T11:48:34 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-30T11:48:37 EDT" duration-ms="3494" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Data Structures dropdown validation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["GetStarted page without logging on"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-04-30T11:48:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-30T11:48:40 EDT" duration-ms="2374" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Get Started button validation of DataStructures"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["GetStarted page without logging on"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-04-30T11:48:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-30T11:48:40 EDT" duration-ms="371" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Signin page validation with no username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DS Algo Sign in Page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-04-30T11:48:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-30T11:48:41 EDT" duration-ms="422" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Signin page validation with username and  no password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DS Algo Sign in Page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-04-30T11:48:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-30T11:48:41 EDT" duration-ms="403" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Signin page validation with no username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DS Algo Sign in Page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-04-30T11:48:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-30T11:48:42 EDT" duration-ms="671" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Signin page validation with invalid username and invalid  password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DS Algo Sign in Page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-04-30T11:48:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-30T11:48:42 EDT" duration-ms="777" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Signin page validation with valid username and valid password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DS Algo Sign in Page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-04-30T11:48:42 EDT" name="tearDownClass" finished-at="2024-04-30T11:48:43 EDT" duration-ms="59" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- dsalgo_stepdefinition.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

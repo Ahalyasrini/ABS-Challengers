@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-26T14:48:38 EDT" name="Surefire suite" finished-at="2024-04-26T14:48:41 EDT" duration-ms="3006">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4241e0f4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2024-04-26T14:48:38 EDT" name="Surefire test" finished-at="2024-04-26T14:48:41 EDT" duration-ms="3006">
+      <class name="dsalgo_stepdefinition.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4241e0f4]" started-at="2024-04-26T14:48:38 EDT" name="setUpClass" finished-at="2024-04-26T14:48:38 EDT" duration-ms="371" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6d091cad]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4241e0f4]" started-at="2024-04-26T14:48:38 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-26T14:48:40 EDT" duration-ms="2516" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Open the browser"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Browser page"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalAccessError">
+            <message>
+              <![CDATA[class dsalgo_stepdefinition.DSalgoHomePage (in unnamed module @0x2cbb3d47) cannot access class jdk.internal.org.jline.utils.Log (in module jdk.internal.le) because module jdk.internal.le does not export jdk.internal.org.jline.utils to unnamed module @0x2cbb3d47]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalAccessError: class dsalgo_stepdefinition.DSalgoHomePage (in unnamed module @0x2cbb3d47) cannot access class jdk.internal.org.jline.utils.Log (in module jdk.internal.le) because module jdk.internal.le does not export jdk.internal.org.jline.utils to unnamed module @0x2cbb3d47
+at dsalgo_stepdefinition.DSalgoHomePage.user_should_be_landed_on_the_data_structure_page(DSalgoHomePage.java:59)
+at ✽.User should be landed on the data structure page with title "NumpyNinja"(file:///C:/Users/senth/eclipse-workspace/Ds-Algo/src/test/resources/features/ABS01_DsalgoHomePage.feature:28)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalAccessError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4241e0f4]" started-at="2024-04-26T14:48:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-26T14:48:41 EDT" duration-ms="63" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Data Structures dropdown validation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["GetStarted page without logging on"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:dsalgo_stepdefinition.TestRunner@4241e0f4]" started-at="2024-04-26T14:48:41 EDT" name="tearDownClass" finished-at="2024-04-26T14:48:41 EDT" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- dsalgo_stepdefinition.TestRunner -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

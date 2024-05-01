@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: dsalgo_stepdefinition.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.557 s <<< FAILURE! -- in dsalgo_stepdefinition.TestRunner
+dsalgo_stepdefinition.TestRunner.runScenario["Open the browser", "Browser page"](1) -- Time elapsed: 2.523 s <<< FAILURE!
+java.lang.IllegalAccessError: class dsalgo_stepdefinition.DSalgoHomePage (in unnamed module @0x2cbb3d47) cannot access class jdk.internal.org.jline.utils.Log (in module jdk.internal.le) because module jdk.internal.le does not export jdk.internal.org.jline.utils to unnamed module @0x2cbb3d47
+	at dsalgo_stepdefinition.DSalgoHomePage.user_should_be_landed_on_the_data_structure_page(DSalgoHomePage.java:59)
+	at ✽.User should be landed on the data structure page with title "NumpyNinja"(file:///C:/Users/senth/eclipse-workspace/Ds-Algo/src/test/resources/features/ABS01_DsalgoHomePage.feature:28)
+
