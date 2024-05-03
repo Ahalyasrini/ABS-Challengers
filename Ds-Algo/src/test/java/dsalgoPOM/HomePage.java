@@ -3,37 +3,26 @@ package dsalgoPOM;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import dsalgo_webdriver_manager.DriverManager;
 
-public class HomePage{
-	private WebDriver driver;    
+public class HomePage extends DriverManager{
+      
 	By home_msg = By.xpath("//div[@class='content']/p");
 	By startBtn = By.xpath("//button[@class='btn']");
 	private String msg;
     
- public HomePage(WebDriver driver)
+ public HomePage()
  {
-	 this.driver=driver;
-	 	 
+	 	 	 
  }
  
- public void goTo()
- {
-	 // added to avoid null pointer exception
-	 //	 driver.get("https://dsportalapp.herokuapp.com/");
-	 driver.get(DriverManager.url);
- }
- 
- public String LoadPage()
+ public String getmessage()
  {	
-	return msg = driver.findElement(home_msg).getText();
-	
-	 
+	return msg = driver.findElement(home_msg).getText();	 
  }
- public WebElement clickButton()
+ public void clickButton()
  {
-	return driver.findElement(startBtn); 
+	 driver.findElement(startBtn).click(); 
  }
  public String getTitle()
  {
