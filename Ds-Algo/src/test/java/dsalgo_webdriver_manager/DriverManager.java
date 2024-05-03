@@ -22,9 +22,10 @@ public class DriverManager {
 	{	
 		try {
 		 prop = new Properties();
-		//FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//src//test//resources//config//globaldata.properties");
-		FileInputStream fis = new FileInputStream("/Users/omkku/Desktop/Bhuvana_Selenium/Ds-Algo/"
-				+ "src/test/resources/config/globaldata.properties");			
+		 System.out.println(System.getProperty("user.dir"));
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//src//test//resources//config//globaldata.properties");
+//		FileInputStream fis = new FileInputStream("/Users/omkku/Desktop/Bhuvana_Selenium/Ds-Algo/"
+//				+ "src/test/resources/config/globaldata.properties");			
 		prop.load(fis);			
 		} catch (IOException e) {
 			e.getMessage();
