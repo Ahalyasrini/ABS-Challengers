@@ -18,6 +18,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class DriverManager {
 	public static WebDriver driver;
 	public static Properties prop;
+	public static String url;
 	public DriverManager()
 	{	
 		try {
@@ -51,7 +52,8 @@ public class DriverManager {
 			}			
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-			driver.get(prop.getProperty("Url"));
+			url = prop.getProperty("Url");
+			driver.get(url);
 			}
 		} 
 }

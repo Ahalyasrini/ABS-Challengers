@@ -9,6 +9,7 @@ public class HomePage extends DriverManager{
       
 	By home_msg = By.xpath("//div[@class='content']/p");
 	By startBtn = By.xpath("//button[@class='btn']");
+	By register_msg = By.xpath("//div[@class='alert alert-primary']");
 	private String msg;
     
  public HomePage()
@@ -28,6 +29,11 @@ public class HomePage extends DriverManager{
  {
 	 return driver.getTitle();
  }
- 
+ public String RegisterSuccess()
+ {	
+ 	 return msg=driver.findElement(register_msg).getText();
+ 	 
+ }
+
 
 }
