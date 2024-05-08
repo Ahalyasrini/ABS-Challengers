@@ -11,39 +11,48 @@ Feature: DS Algo Sign in Page
   @homePage
   Scenario Outline: Signin page validation with username and  no password
     Given user is on the DS Algo Sign in Page
-    And The user clicks login button after entering the <userName> and leaves <password> textbox blank
+    And The user clicks login button after entering the userName and leaves password textbox blank <rowNumber> <sheetName>
     Then The error message "Please fill out this field." appears below Pwd textbox
 
-    Examples: 
-      | userName       | password |
-      | abschallengers |          |
+    Examples:
+    |rowNumber|sheetName|
+    |1|validCredentials|
 
   @homePage
   Scenario Outline: Signin page validation with no username
     Given user is on  DS Algo Sign in Page
-    When The user clicks login button after entering the <passWord> only
+    When The user clicks login button after entering the passWord only <rowNumber> <sheetName>
     Then The error message "Please fill out this field." appears below username textbox
 
-    Examples: 
-      | username | passWord     |
-      |          | numpyninja17 |
+    Examples:
+    |rowNumber|sheetName|
+    |1|validCredentials|
 
   @homePage
   Scenario Outline: Signin page validation with invalid username and invalid  password
     Given user lands on DS Algo Sign in page
-    When The user clicks login button after entering invalid <UserName> and invalid <PassWord>
+    When The user clicks login button after entering invalid UserName and invalid PassWord <rowNumber> <sheetName>
     Then The error message "Invalid Username and Password". appears below Username textbox
 
-    Examples: 
-      | UserName | PassWord |
-      | abs      | numpy17  |
+    Examples:
+    |rowNumber|sheetName|
+    |1|invalidCredential|
+    
+
+    #Examples: 
+      #| UserName | PassWord |
+      #| abs      | numpy17  |
 
   @homePage
   Scenario Outline: Signin page validation with valid username and valid password
     Given The  user land on DS Algo Sign in page
-    When The user clicks login button after entering valid <UserName> and valid <PassWord>
+    When The user clicks login button after entering valid UserName and valid PassWord <rowNumber> <sheetName>
     Then The user should land in Data Structure Home Page "You are logged in"
 
-    Examples: 
-      | UserName| PassWord |
-      | abschallengers | numpyninja17 |
+    Examples:
+    |rowNumber|sheetName|
+    |1|validCredentials|
+    
+    #Examples: 
+      #| UserName| PassWord |
+      #| abschallengers | numpyninja17 |

@@ -13,7 +13,10 @@ public class ArrayPage {
 	By basicOperation=By.xpath("//a[@href=\"basic-operations-in-lists\"]");
 	By applicationsOfarray=By.xpath("//a[@href=\"applications-of-array\"]");
 	By tryHere=By.xpath("//a[@href=\"/tryEditor\"]");
+<<<<<<< HEAD
 	By editorbox=By.xpath("//div[@class=\"CodeMirror-scroll\"]");
+=======
+>>>>>>> Ahalya_WIP
 	 public ArrayPage(WebDriver driver)
 	 {
 		  this.driver=driver;
@@ -49,6 +52,9 @@ public class ArrayPage {
 		}
 	public void tryHerebtn() {
 		driver.findElement(tryHere).click();
+<<<<<<< HEAD
 		
+=======
+>>>>>>> Ahalya_WIP
 	}
 }
