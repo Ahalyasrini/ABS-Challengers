@@ -6,7 +6,7 @@
       <class name="dsalgo_stepdefinition.TestRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="5"/>
+          <include name="runScenario" invocation-numbers="16 17 9 10 11 12 13 14 15"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- dsalgo_stepdefinition.TestRunner -->
