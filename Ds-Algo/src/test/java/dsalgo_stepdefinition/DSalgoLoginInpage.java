@@ -1,5 +1,7 @@
 package dsalgo_stepdefinition;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -7,6 +9,8 @@ import java.util.Map;
 import org.testng.Assert;
 
 import dsalgoPOM.LoginInpage;
+import dsalgoPOM.RegisterPage;
+import dsalgo_utilities.ExcelReader;
 import dsalgo_webdriver_manager.DriverManager;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -17,7 +21,7 @@ import io.cucumber.java.en.When;
 public class DSalgoLoginInpage extends DriverManager {
 	
 	public  LoginInpage login= new  LoginInpage(driver);
-
+	
 	
 	@Given("The user is on the DS Algo Sign in Page")
 	public void the_user_is_on_the_ds_algo_sign_in_page() {
@@ -42,10 +46,14 @@ public class DSalgoLoginInpage extends DriverManager {
 	   login.clicksign_in();
 	}
 
-@And("^The user clicks login button after entering the (.*) and leaves (.*) textbox blank$")
-	public void the_user_clicks_login_button_after_entering_the_abschallengers_and_leaves_textbox_blank(String userName, String password) {
+@And("^The user clicks login button after entering the userName and leaves password textbox blank (.*) (.*)$")
+	public void the_user_clicks_login_button_after_entering_the_abschallengers_and_leaves_textbox_blank(int rowNumber, String sheetName) throws IOException {
 	
-		login.enterUserName(userName);
+	ExcelReader reader = new ExcelReader();
+	List<Map<String,String>> excelData = reader.readExcelSheet(sheetName);
+	String username = excelData.get(rowNumber).get("username");
+	System.out.println("username is "+ username);
+	login.enterUserName(username);
 	login.clicklogin();
 		
 	}
@@ -62,9 +70,15 @@ public class DSalgoLoginInpage extends DriverManager {
 	    login.clicksign_in();
 	}
 
-	@When("^The user clicks login button after entering the (.*) only$")
-	public void the_user_clicks_login_button_after_entering_the_numpyninja17_only(String passWord) {
-		login.enterPassWord(passWord);
+	@When("^The user clicks login button after entering the passWord only (.*) (.*)$")
+	public void the_user_clicks_login_button_after_entering_the_numpyninja17_only(int rowNumber, String sheetName ) throws IOException {
+		
+		ExcelReader reader = new ExcelReader();
+		List<Map<String,String>> excelData = reader.readExcelSheet(sheetName);
+		String password = excelData.get(rowNumber).get("password");
+		System.out.println("password is "+ password);
+		
+		login.enterPassWord(password);
 		login.clicklogin();
 	   }
 	@Then("The error message {string} appears below username textbox")
@@ -80,9 +94,17 @@ public class DSalgoLoginInpage extends DriverManager {
 		login.clicksign_in();
 	    }
 
-	@When("^The user clicks login button after entering invalid (.*) and invalid (.*)$")
-	public void the_user_clicks_login_button_after_entering_invalid_abs_and_invalid_numpy17(String UserName,String PassWord) {
-		login.enterUserNamePassWrd(UserName, PassWord);
+	@When("^The user clicks login button after entering invalid UserName and invalid PassWord (.*) (.*)$")
+	public void the_user_clicks_login_button_after_entering_invalid_abs_and_invalid_numpy17(int rowNumber,String sheetName) throws IOException {
+		ExcelReader reader = new ExcelReader();
+		List<Map<String,String>> excelData = reader.readExcelSheet(sheetName);
+		String username = excelData.get(rowNumber).get("username");
+		System.out.println("username is "+ username);
+		String password = excelData.get(rowNumber).get("password");
+		System.out.println("password is "+ password);
+		
+		
+		login.enterUserNamePassWrd(username, password);
 		login.clicklogin();
 	   
 	}
@@ -100,18 +122,30 @@ public class DSalgoLoginInpage extends DriverManager {
 	    login.clicksign_in();
 	}
 
-	@When("^The user clicks login button after entering valid (.*)and valid (.*)$")
-	public void the_user_clicks_login_button_after_entering_valid_username_and_valid_password(String UserName, String PassWord ) {
-		login.ValidenterUserNamePassWrd(UserName, PassWord);
-		login.clicklogin();
-	}
+//	@When("^The user clicks login button after entering valid (.*)and valid (.*)$")
+//	public void the_user_clicks_login_button_after_entering_valid_username_and_valid_password(String UserName, String PassWord ) {
+//		login.ValidenterUserNamePassWrd(UserName, PassWord);
+//		login.clicklogin();
+//	}
 
 	@Then("The user should land in Data Structure Home Page {string}")
 	public void the_user_should_land_in_data_structure_home_page(String string) {
 	   String validmsg= login.validatemessage();
 	   System.out.println(validmsg);
 	   Assert.assertEquals(validmsg, string);
-	  
+	}
+	
+	@When("^The user clicks login button after entering valid UserName and valid PassWord (.*) (.*)$")
+	public void user_enters_valid_username_password_confirm_password_and_clicks_register_button_from_row(Integer rowNumber, String sheetName) throws IOException {
+		ExcelReader reader = new ExcelReader();
+		List<Map<String,String>> excelData = reader.readExcelSheet(sheetName);
+		    String username = excelData.get(rowNumber).get("username");
+	        System.out.println("username is "+ username);
+	        String password = excelData.get(rowNumber).get("password");
+	        System.out.println("password is "+ password);
+	        
+	        login.ValidenterUserNamePassWrd(username, password);
+	        login.clicklogin();
 	}
 
 

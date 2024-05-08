@@ -18,26 +18,16 @@ public class ExcelReader {
 	
 	
 	public static List<Map<String, String>> readExcelSheet() throws IOException{
-	
-
 		List<Map<String, String>> arraylist = new ArrayList<Map<String,String>>();
-		
-	
-		
 		String path = System.getProperty("user.dir")+"/src/test/resources/TestData/registerUserName.xlsx";
         File Excelfile = new File(path);
-		
 		FileInputStream Fis = new FileInputStream(Excelfile);
-		
 		XSSFWorkbook workbook = new XSSFWorkbook(Fis);
-		
 		XSSFSheet sheet = workbook.getSheet("Sheet1");
-		
 		Iterator<Row> rowIterator = sheet.rowIterator();
 		 
 		while(rowIterator.hasNext()) {
 			Row currRow = rowIterator.next();
-			
 			HashMap<String, String> row1 = new HashMap<String, String>();
 			row1.put("username", currRow.getCell(0).getStringCellValue());
 			row1.put("password", currRow.getCell(1).getStringCellValue());
@@ -45,14 +35,48 @@ public class ExcelReader {
 			
 			arraylist.add(row1);
 			Iterator<Cell> cell = currRow.cellIterator();
-		}
-				
-			return arraylist;
-			
+			}
+		return arraylist;
 		}
 		
-	
-
+	public static List<Map<String, String>> readExcelSheet(String SheetName) throws IOException{
+		List<Map<String, String>> arraylist = new ArrayList<Map<String,String>>();
+		String path = System.getProperty("user.dir")+"/src/test/resources/TestData/registerUserName.xlsx";
+        File Excelfile = new File(path);
+		FileInputStream Fis = new FileInputStream(Excelfile);
+		XSSFWorkbook workbook = new XSSFWorkbook(Fis);
+		XSSFSheet sheet = workbook.getSheet(SheetName);
+		Iterator<Row> rowIterator = sheet.rowIterator();
+		 
+		while(rowIterator.hasNext()) {
+			Row currRow = rowIterator.next();
+			HashMap<String, String> row1 = new HashMap<String, String>();
+			row1.put("username", currRow.getCell(0).getStringCellValue());
+			row1.put("password", currRow.getCell(1).getStringCellValue());			
+			arraylist.add(row1);
+//			Iterator<Cell> cell = currRow.cellIterator();
+			}
+		return arraylist;
+		}
+public static List<Map<String, String>> readExcelSheetFortexteditor(String SheetName) throws IOException{
+		List<Map<String, String>> arraylist = new ArrayList<Map<String,String>>();
+		String path = System.getProperty("user.dir")+"/src/test/resources/TestData/registerUserName.xlsx";
+        File Excelfile = new File(path);
+		FileInputStream Fis = new FileInputStream(Excelfile);
+		XSSFWorkbook workbook = new XSSFWorkbook(Fis);
+		XSSFSheet sheet = workbook.getSheet(SheetName);
+		Iterator<Row> rowIterator = sheet.rowIterator();
+		 
+		while(rowIterator.hasNext()) {
+			Row currRow = rowIterator.next();
+			HashMap<String, String> row1 = new HashMap<String, String>();
+			row1.put("invalid_text", currRow.getCell(0).getStringCellValue());
+			row1.put("valid_text", currRow.getCell(1).getStringCellValue());			
+			arraylist.add(row1);
+//			Iterator<Cell> cell = currRow.cellIterator();
+			}
+		return arraylist;
+		}
 	
 
 }
