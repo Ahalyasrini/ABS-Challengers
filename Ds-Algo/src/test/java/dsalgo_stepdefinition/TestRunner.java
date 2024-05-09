@@ -11,7 +11,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		plugin = {"pretty", "html:target/Ahalya123.html"}, //reporting purpose
 		monochrome=false,  //console output colour
-		tags = "@homePage or @stack", //tags from feature file
+		tags = "@homePage or @DataStructure or  @stack", //tags from feature file
 		features = {"src/test/resources/features"}, //location of feature files
 		glue= {"dsalgo_stepdefinition"}) //location of step definition files
 
