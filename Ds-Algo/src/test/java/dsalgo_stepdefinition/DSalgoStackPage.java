@@ -26,6 +26,7 @@ public class DSalgoStackPage extends DriverManager{
 	public void the_user_is_on_homepage() {
 	
 		DriverManager.initializeDriver();
+		navigateHome();
 	}
 
 	@Then("The user should be redirected to {string} page")
