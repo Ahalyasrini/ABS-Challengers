@@ -56,14 +56,10 @@ public class DriverManager {
 			driver.get(url);
 			}
 		} 
-}
 	
-	/*public HomePage LaunchApplication() throws IOException
+	public void navigateHome()
 	{
-		driver = initializeDriver();
-		HomePage homepage=new HomePage(driver);
-		homepage.goTo();
-		return homepage;
+		driver.get(url + "home");
 	}
-*/
+}
 	
