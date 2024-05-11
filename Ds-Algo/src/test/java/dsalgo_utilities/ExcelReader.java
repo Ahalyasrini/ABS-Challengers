@@ -59,6 +59,7 @@ public class ExcelReader {
 		return arraylist;
 		}
 public static List<Map<String, String>> readExcelSheetFortexteditor(String SheetName) throws IOException{
+	System.out.println(SheetName);
 		List<Map<String, String>> arraylist = new ArrayList<Map<String,String>>();
 		String path = System.getProperty("user.dir")+"/src/test/resources/TestData/registerUserName.xlsx";
         File Excelfile = new File(path);
@@ -71,12 +72,39 @@ public static List<Map<String, String>> readExcelSheetFortexteditor(String Sheet
 			Row currRow = rowIterator.next();
 			HashMap<String, String> row1 = new HashMap<String, String>();
 			row1.put("invalid_text", currRow.getCell(0).getStringCellValue());
-			row1.put("valid_text", currRow.getCell(1).getStringCellValue());			
+			row1.put("valid_text", currRow.getCell(1).getStringCellValue());				
 			arraylist.add(row1);
 //			Iterator<Cell> cell = currRow.cellIterator();
 			}
+		workbook.close();
+		Fis.close();
 		return arraylist;
+		
 		}
 	
 
+public static List<Map<String, String>> readExcelSheetForPracticeLinks(String SheetName) throws IOException{
+	System.out.println(SheetName);
+		List<Map<String, String>> arraylist = new ArrayList<Map<String,String>>();
+		String path = System.getProperty("user.dir")+"/src/test/resources/TestData/registerUserName.xlsx";
+        File Excelfile = new File(path);
+		FileInputStream Fis = new FileInputStream(Excelfile);
+		XSSFWorkbook workbook = new XSSFWorkbook(Fis);
+		XSSFSheet sheet = workbook.getSheet(SheetName);
+		Iterator<Row> rowIterator = sheet.rowIterator();
+		 
+		while(rowIterator.hasNext()) {
+			Row currRow = rowIterator.next();
+			HashMap<String, String> row1 = new HashMap<String, String>();
+			row1.put(sheet.getRow(0).getCell(0).getStringCellValue(), currRow.getCell(0).getStringCellValue());
+			row1.put(sheet.getRow(0).getCell(1).getStringCellValue(), currRow.getCell(1).getStringCellValue());	
+			row1.put(sheet.getRow(0).getCell(2).getStringCellValue(), currRow.getCell(2).getStringCellValue());	
+			arraylist.add(row1);
+//			Iterator<Cell> cell = currRow.cellIterator();
+			}
+		workbook.close();
+		Fis.close();
+		return arraylist;
+		
+		}
 }
