@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="48" passed="48" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -15,13 +16,35 @@
             <param index="0">
               <value>
                 <![CDATA[org.testng.TestRunner@11a67420]]>
+=======
+<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-11T14:03:36 EDT" name="Default suite" finished-at="2024-05-11T14:03:58 EDT" duration-ms="21959">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2024-05-11T14:03:36 EDT" name="Default test" finished-at="2024-05-11T14:03:58 EDT" duration-ms="21959">
+      <class name="dsalgo_stepdefinition.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-05-11T14:03:36 EDT" name="setUpClass" finished-at="2024-05-11T14:03:37 EDT" duration-ms="414" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1feb76b9]]>
+>>>>>>> Ahalya_WIP
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@2462cb01]" started-at="2024-05-10T22:37:27 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T22:37:31 EDT" duration-ms="3703" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-05-11T14:03:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-11T14:03:39 EDT" duration-ms="1937" status="PASS">
+>>>>>>> Ahalya_WIP
           <params>
             <param index="0">
               <value>
@@ -37,7 +60,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@2462cb01]" started-at="2024-05-10T22:37:31 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T22:37:35 EDT" duration-ms="3618" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-05-11T14:03:39 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-11T14:03:41 EDT" duration-ms="2293" status="PASS">
+>>>>>>> Ahalya_WIP
           <params>
             <param index="0">
               <value>
@@ -53,7 +80,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@2462cb01]" started-at="2024-05-10T22:37:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T22:37:37 EDT" duration-ms="2273" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-05-11T14:03:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-11T14:03:43 EDT" duration-ms="1553" status="PASS">
+>>>>>>> Ahalya_WIP
           <params>
             <param index="0">
               <value>
@@ -69,7 +100,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@2462cb01]" started-at="2024-05-10T22:37:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T22:37:37 EDT" duration-ms="298" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-05-11T14:03:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-11T14:03:43 EDT" duration-ms="201" status="PASS">
+>>>>>>> Ahalya_WIP
           <params>
             <param index="0">
               <value>
@@ -85,7 +120,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@2462cb01]" started-at="2024-05-10T22:37:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T22:37:39 EDT" duration-ms="1721" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-05-11T14:03:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-11T14:03:44 EDT" duration-ms="1050" status="PASS">
+>>>>>>> Ahalya_WIP
           <params>
             <param index="0">
               <value>
@@ -101,7 +140,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@2462cb01]" started-at="2024-05-10T22:37:39 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T22:37:39 EDT" duration-ms="424" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-05-11T14:03:44 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-11T14:03:44 EDT" duration-ms="271" status="PASS">
+>>>>>>> Ahalya_WIP
           <params>
             <param index="0">
               <value>
@@ -117,7 +160,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@2462cb01]" started-at="2024-05-10T22:37:39 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T22:37:40 EDT" duration-ms="748" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-05-11T14:03:44 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-11T14:03:45 EDT" duration-ms="448" status="PASS">
+>>>>>>> Ahalya_WIP
           <params>
             <param index="0">
               <value>
@@ -133,7 +180,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@2462cb01]" started-at="2024-05-10T22:37:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T22:37:41 EDT" duration-ms="817" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-05-11T14:03:45 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-11T14:03:45 EDT" duration-ms="540" status="PASS">
+>>>>>>> Ahalya_WIP
           <params>
             <param index="0">
               <value>
@@ -149,102 +200,175 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@2462cb01]" started-at="2024-05-10T22:37:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T22:37:41 EDT" duration-ms="308" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA["Get started page of Data Structure"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-05-11T14:03:45 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-11T14:03:46 EDT" duration-ms="1239" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["validating array page"]]>
+>>>>>>> Ahalya_WIP
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA["DataStructure page"]]>
+=======
+                <![CDATA["DSalgo arraypage"]]>
+>>>>>>> Ahalya_WIP
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@2462cb01]" started-at="2024-05-10T22:37:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T22:37:43 EDT" duration-ms="1274" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA["Data structures introduction page"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-05-11T14:03:46 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-11T14:03:50 EDT" duration-ms="3337" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["validating Arrays in python page"]]>
+>>>>>>> Ahalya_WIP
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA["DataStructure page"]]>
+=======
+                <![CDATA["DSalgo arraypage"]]>
+>>>>>>> Ahalya_WIP
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@2462cb01]" started-at="2024-05-10T22:37:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T22:37:44 EDT" duration-ms="1879" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA["Text editor screen"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-05-11T14:03:50 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-11T14:03:52 EDT" duration-ms="2149" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["validating Arrays using list page"]]>
+>>>>>>> Ahalya_WIP
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA["DataStructure page"]]>
+=======
+                <![CDATA["DSalgo arraypage"]]>
+>>>>>>> Ahalya_WIP
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@2462cb01]" started-at="2024-05-10T22:37:44 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T22:37:45 EDT" duration-ms="376" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA["Console message and Practice Questions page"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-05-11T14:03:52 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-11T14:03:54 EDT" duration-ms="2112" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["validating Basic operations in list page"]]>
+>>>>>>> Ahalya_WIP
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA["DataStructure page"]]>
+=======
+                <![CDATA["DSalgo arraypage"]]>
+>>>>>>> Ahalya_WIP
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@2462cb01]" started-at="2024-05-10T22:37:45 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T22:37:45 EDT" duration-ms="381" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA["The user is able to naviagte to Stack page"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-05-11T14:03:54 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-11T14:03:56 EDT" duration-ms="2095" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["validating Applications of array page"]]>
+>>>>>>> Ahalya_WIP
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA["User launch DSAlgo application and test stack page"]]>
+=======
+                <![CDATA["DSalgo arraypage"]]>
+>>>>>>> Ahalya_WIP
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@2462cb01]" started-at="2024-05-10T22:37:45 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T22:37:46 EDT" duration-ms="495" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA["The user is able to navigate to Operations in Stack page"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-05-11T14:03:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-11T14:03:58 EDT" duration-ms="2228" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["validating Practice questions page"]]>
+>>>>>>> Ahalya_WIP
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA["User launch DSAlgo application and test stack page"]]>
+=======
+                <![CDATA["DSalgo arraypage"]]>
+>>>>>>> Ahalya_WIP
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsalgo_stepdefinition.TestRunner@2462cb01]" started-at="2024-05-10T22:37:46 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T22:37:46 EDT" duration-ms="372" status="PASS">
           <params>
             <param index="0">
@@ -790,6 +914,9 @@
           </reporter-output>
         </test-method> <!-- runScenario -->
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:dsalgo_stepdefinition.TestRunner@2462cb01]" started-at="2024-05-10T22:38:18 EDT" name="tearDownClass" finished-at="2024-05-10T22:38:18 EDT" duration-ms="30" status="PASS">
+=======
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:dsalgo_stepdefinition.TestRunner@4b14918a]" started-at="2024-05-11T14:03:58 EDT" name="tearDownClass" finished-at="2024-05-11T14:03:58 EDT" duration-ms="25" status="PASS">
+>>>>>>> Ahalya_WIP
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

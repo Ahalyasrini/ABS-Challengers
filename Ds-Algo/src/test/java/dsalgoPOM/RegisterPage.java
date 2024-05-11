@@ -33,8 +33,6 @@ public class RegisterPage extends DriverManager {
 	public void verifyErrorMessage(String string) {
 		System.out.println(driver.findElement(PsswdErrMsg).getText());
 		assertEquals(driver.findElement(PsswdErrMsg).getText(), string);
-
-		
 	}
 	public void setUserName(String userName2) {
 		driver.findElement(UserName).sendKeys(userName2);
