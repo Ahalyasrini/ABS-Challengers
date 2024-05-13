@@ -137,7 +137,3 @@ Scenario: The user is able to navigate to Practice Questions in Queue page
   Given User is on the "Queue" page 
   When User clicks on "Practice Questions" link
   Then User should be navigate to "https://dsportalapp.herokuapp.com/queue/practice" page 
- 
-    
-    
-    
