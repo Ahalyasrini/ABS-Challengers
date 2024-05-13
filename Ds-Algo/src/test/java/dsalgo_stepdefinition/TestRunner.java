@@ -11,12 +11,11 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		plugin = {"pretty", "html:target/Ahalya123.html"}, //reporting purpose
 		monochrome=false,  //console output colour
-<<<<<<< HEAD
-		tags = "@homePage or @DataStructure or @stack or @queue or @graph", //tags from feature file
-=======
+
+//		tags = "@homePage or @DataStructure or @arrayPage or  @LinKedListPage @stack or @queue or @graph", //tags from feature file
 		tags = "@homePage or @arrayPage", //tags from feature file
 //		tags = "@homePage or @DataStructure", //tags from feature file
->>>>>>> Ahalya_WIP
+
 		features = {"src/test/resources/features"}, //location of feature files
 		glue= {"dsalgo_stepdefinition"}) //location of step definition files
 
