@@ -1,4 +1,4 @@
-@queue
+@graph
 Feature: User launch DSAlgo application and Test Queue page
 
 @graph

@@ -22,6 +22,7 @@ public class DSalgoTreePage extends DriverManager {
 	@Given("USER is on Dalgo homepage  and verify the page title")
 	public void user_is_on_dalgo_homepage_and_verify_the_page_title_row_number() {
 	    treepage.getpageTitle();
+	    navigateHome();
 	}
   
 	@When("The user clicks  Get Started button below the treeList and verify pagetitle")
