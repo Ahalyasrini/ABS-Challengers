@@ -16,7 +16,6 @@ import io.cucumber.testng.CucumberOptions;
 		features = {"src/test/resources/features"}, //location of feature files
 		glue= {"dsalgo_stepdefinition"}) //location of step definition files
 
-
 public class TestRunner extends AbstractTestNGCucumberTests {
 
 	@Override
