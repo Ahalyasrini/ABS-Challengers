@@ -28,6 +28,7 @@ public class GraphPage extends DriverManager {
 	protected By editTextArea = By.xpath("//form[@id='answer_form']/div/div/div/textarea");
 	public By runItButtonWE =By.xpath("//button[@onclick=\"runit()\"]");
 	By consolemsg = By.xpath("//*[@id='output']");
+	By signOut = By.xpath("//a[@href='/logout']");
 	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 	Alert alert;
 	WebElement txtarea;
@@ -144,6 +145,12 @@ public void clickHyperLink(String argument) {
 	public void clickAlertButton() {
 		
 		driver.switchTo().alert().dismiss();
+	}
+
+
+	public void clickSignOut() {
+		
+		driver.findElement(signOut).click();
 	}
 
 }

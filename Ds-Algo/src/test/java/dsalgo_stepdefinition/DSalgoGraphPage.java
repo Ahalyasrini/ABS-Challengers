@@ -96,6 +96,12 @@ public class DSalgoGraphPage extends DriverManager{
 	public void the_user_navigates_back() {
 		graphPage.navigateback();
 	}
+	
+	@Then("The user clicks on signout")
+	public void the_user_clicks_on_signout() {
+		graphPage.clickSignOut();
+		System.out.println("logged out successful");
+	}
 
 
 }
