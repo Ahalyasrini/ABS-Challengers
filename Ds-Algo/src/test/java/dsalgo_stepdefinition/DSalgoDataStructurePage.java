@@ -4,20 +4,14 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 import dsalgoPOM.DataStructurePage;
 import dsalgo_utilities.ExcelReader;
 import dsalgo_webdriver_manager.DriverManager;
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import jdk.internal.org.jline.utils.Log;
 
 public class DSalgoDataStructurePage extends DriverManager {
 	

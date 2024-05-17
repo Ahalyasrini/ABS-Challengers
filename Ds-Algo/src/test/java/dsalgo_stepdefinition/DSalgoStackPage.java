@@ -1,13 +1,10 @@
 package dsalgo_stepdefinition;
 
 import java.io.IOException;
-import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import dsalgoPOM.StackPage;
 import dsalgo_utilities.ExcelReader;

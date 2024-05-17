@@ -1,8 +1,7 @@
 package dsalgoPOM;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 import dsalgo_webdriver_manager.DriverManager;
 
 public class HomePage extends DriverManager{

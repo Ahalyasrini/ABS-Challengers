@@ -1,21 +1,13 @@
 package dsalgo_stepdefinition;
 
-import java.io.IOException;
-import java.time.Duration;
-import java.util.NoSuchElementException;
-
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import dsalgoPOM.HomePage;
-import dsalgo_commonlibraries.CommonLibraries;
-import dsalgo_utilities.LoggerLoad;
 import dsalgo_webdriver_manager.DriverManager;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import jdk.internal.org.jline.utils.Log;
 
 public class DSalgoHomePage extends DriverManager{	
     HomePage homepage = new HomePage() ;
