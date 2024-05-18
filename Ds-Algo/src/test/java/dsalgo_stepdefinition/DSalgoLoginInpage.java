@@ -1,18 +1,14 @@
 package dsalgo_stepdefinition;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.testng.Assert;
 
 import dsalgoPOM.LoginInpage;
-import dsalgoPOM.RegisterPage;
 import dsalgo_utilities.ExcelReader;
 import dsalgo_webdriver_manager.DriverManager;
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

@@ -1,21 +1,15 @@
 package dsalgo_stepdefinition;
 
 import java.io.IOException;
-import java.time.Duration;
-import java.util.NoSuchElementException;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import dsalgoPOM.HomePage;
-import dsalgo_commonlibraries.CommonLibraries;
-import dsalgo_utilities.LoggerLoad;
 import dsalgo_webdriver_manager.DriverManager;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import jdk.internal.org.jline.utils.Log;
 
 public class DSalgoHomePage extends DriverManager{	
     HomePage homepage = new HomePage() ;
@@ -29,11 +23,18 @@ public class DSalgoHomePage extends DriverManager{
 		DriverManager.initializeDriver();
 		}	
 	@Then("The user should be landed on the DS_Algo Get Started page with message {string}")
-	public void the_user_should_be_landed_on_the_ds_algo_get_started_page_with_message(String expectedmsg) throws IOException{
+	public void the_user_should_be_landed_on_the_ds_algo_get_started_page_with_message(String expectedmsg) {
 	
-		String landingpageMsg = homepage.getmessage();
-		System.out.println(landingpageMsg);
-		Assert.assertEquals(landingpageMsg, expectedmsg);
+		String landingpageMsg;
+		try {
+			landingpageMsg = homepage.getmessage();
+			System.out.println(landingpageMsg);
+			Assert.assertEquals(landingpageMsg, expectedmsg);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 
 	@When("User clicks on get started button")

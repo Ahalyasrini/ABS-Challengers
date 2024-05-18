@@ -20,6 +20,7 @@ public class DSalgoArrayPage extends DriverManager {
 	ArrayPage arraypage=new ArrayPage(driver);
 	@Given("User is on Dalgo homepage  and verify the page title")
 	public void user_is_on_dalgo_homepage_and_verify_the_page_title_row_number() {
+		navigateHome();
 	    arraypage.getpageTitle();
 	}
 

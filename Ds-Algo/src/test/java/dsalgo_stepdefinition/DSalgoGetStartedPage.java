@@ -1,18 +1,10 @@
 package dsalgo_stepdefinition;
 
-import java.io.IOException;
-import java.time.Duration;
 import java.util.List;
-import java.util.NoSuchElementException;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 import dsalgoPOM.GetStartedPage;
-import dsalgoPOM.HomePage;
-import dsalgo_commonlibraries.CommonLibraries;
-import dsalgo_utilities.LoggerLoad;
 import dsalgo_webdriver_manager.DriverManager;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;

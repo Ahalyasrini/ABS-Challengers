@@ -31,15 +31,9 @@ public class HomePage extends DriverManager{
  {	
 	 JavascriptExecutor js = (JavascriptExecutor) driver;
 	js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", driver.findElement(home_msg));
-	
-	
 	File scrFile = ((TakesScreenshot)DriverManager.driver).getScreenshotAs(OutputType.FILE);
-	// Now you can do whatever you need to do with it, for example copy somewhere
 	System.out.println(System.getProperty("user.dir")+"\\src\\test\\resources\\Screenshots\\"+"Highlight"+"_"+System.currentTimeMillis() +".png");
 	FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+"\\src\\test\\resources\\Screenshots\\"+"Highlight" + "_"+System.currentTimeMillis() +".png"));
-	
-	
-	
 	return msg = driver.findElement(home_msg).getText();	 
  }
  public void clickButton()

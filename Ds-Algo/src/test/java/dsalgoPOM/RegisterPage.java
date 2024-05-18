@@ -3,7 +3,6 @@ package dsalgoPOM;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 import dsalgo_webdriver_manager.DriverManager;
 

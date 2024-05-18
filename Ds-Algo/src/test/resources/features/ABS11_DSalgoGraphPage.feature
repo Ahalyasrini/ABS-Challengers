@@ -1,4 +1,4 @@
-@queue
+@graph
 Feature: User launch DSAlgo application and Test Queue page
 
 @graph
@@ -75,3 +75,4 @@ Scenario: The user is able to navigate to Practice Questions in Graph page
   Given User is on "Queue" page 
   When User clicks "Practice Questions" link
   Then User should navigate to "https://dsportalapp.herokuapp.com/graph/practice" page 
+  And The user clicks on signout 

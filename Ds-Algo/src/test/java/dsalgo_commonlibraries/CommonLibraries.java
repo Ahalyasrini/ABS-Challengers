@@ -1,18 +1,11 @@
 package dsalgo_commonlibraries;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.time.Duration;
-import java.util.NoSuchElementException;
 import java.util.Properties;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
-import dsalgo_utilities.LoggerLoad;
-import dsalgo_webdriver_manager.DriverManager;
 
 public class CommonLibraries{
 	public static Properties prop;

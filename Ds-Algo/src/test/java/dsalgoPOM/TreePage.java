@@ -55,16 +55,7 @@ public class TreePage {
 	By practicalquestionbtn=By.xpath("//a[@href=\"/tree/practice\"]");
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	 public TreePage(WebDriver driver) {
+	public TreePage(WebDriver driver) {
 		 this.driver=driver;
 	}
 
