@@ -1,5 +1,7 @@
 package dsalgo_stepdefinition;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
@@ -21,11 +23,18 @@ public class DSalgoHomePage extends DriverManager{
 		DriverManager.initializeDriver();
 		}	
 	@Then("The user should be landed on the DS_Algo Get Started page with message {string}")
-	public void the_user_should_be_landed_on_the_ds_algo_get_started_page_with_message(String expectedmsg){
+	public void the_user_should_be_landed_on_the_ds_algo_get_started_page_with_message(String expectedmsg) {
 	
-		String landingpageMsg = homepage.getmessage();
-		System.out.println(landingpageMsg);
-		Assert.assertEquals(landingpageMsg, expectedmsg);
+		String landingpageMsg;
+		try {
+			landingpageMsg = homepage.getmessage();
+			System.out.println(landingpageMsg);
+			Assert.assertEquals(landingpageMsg, expectedmsg);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 
 	@When("User clicks on get started button")
