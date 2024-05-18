@@ -29,7 +29,7 @@ public class DSalgoHomePage extends DriverManager{
 		DriverManager.initializeDriver();
 		}	
 	@Then("The user should be landed on the DS_Algo Get Started page with message {string}")
-	public void the_user_should_be_landed_on_the_ds_algo_get_started_page_with_message(String expectedmsg){
+	public void the_user_should_be_landed_on_the_ds_algo_get_started_page_with_message(String expectedmsg) throws IOException{
 	
 		String landingpageMsg = homepage.getmessage();
 		System.out.println(landingpageMsg);

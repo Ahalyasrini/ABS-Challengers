@@ -1,5 +1,9 @@
 C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgo_commonlibraries\CommonLibraries.java
 C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgo_stepdefinition\DSalgoDataStructurePage.java
+C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgoPOM\TreePage.java
+C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgoPOM\LinkedListPage.java
+C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgo_stepdefinition\DSalgoLinkedListPage.java
+C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgo_stepdefinition\DSalgoTreePage.java
 C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgo_stepdefinition\DSalgoArrayPage.java
 C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgo_utilities\LoggerLoad.java
 C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgo_stepdefinition\TestRunner.java
@@ -8,6 +12,7 @@ C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgo_stepdefinition\DSalgo
 C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgoPOM\GetStartedPage.java
 C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgo_webdriver_manager\DriverManager.java
 C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgo_utilities\TestContextSetup.java
+C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgo_stepdefinition\Hooks.java
 C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgo_utilities\ExcelReader.java
 C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgoPOM\DataStructurePage.java
 C:\Users\senth\AutomationRepo\Ds-Algo\src\test\java\dsalgo_stepdefinition\DSalgoRegisterPage.java

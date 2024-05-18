@@ -1,5 +1,12 @@
 Feature: GetStarted page without logging on
-@homePage
+
+Background: The login  steps
+    Given The user should open the browser and enters the DS_Algo Portal  
+    Then The user should be landed on the DS_Algo Get Started page with message "You are at the right place"
+    When User clicks on get started button
+    Then User should be landed on the data structure page with title "NumpyNinja"
+
+@homePage14
 Scenario Outline: Data Structures dropdown validation
 Given User is on the Get Started Page
 Then User clicks on Data Structures dropddown and validates all the <options> in  pane
@@ -10,7 +17,7 @@ Then User clicks on Data Structures dropddown and validates all the <options> in
 |Tree|
 |Graph|
 
-@homePage
+@homePage14
 Scenario: Get Started button validation of DataStructures
 Given user is on the Get Started Page
 When User clicks on Get Started button of any Data Structures section and verify the error message "You are not logged in"

@@ -21,7 +21,7 @@ Feature: Browser page
 
   I want to use this template for my feature file
 
-  @homePage
+  @homePage @beforeScenario
   Scenario: Open the browser
     Given The user should open the browser and enters the DS_Algo Portal  
     Then The user should be landed on the DS_Algo Get Started page with message "You are at the right place"
