@@ -15,8 +15,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class DSalgoLoginInpage extends DriverManager {
+	public  LoginInpage login = new LoginInpage();
+	public DSalgoLoginInpage() {
+		super();
+		
+		
+	}
 	
-	public  LoginInpage login= new  LoginInpage(driver);
+	
 	
 	
 	@Given("The user is on the DS Algo Sign in Page")
@@ -143,8 +149,28 @@ public class DSalgoLoginInpage extends DriverManager {
 	        login.ValidenterUserNamePassWrd(username, password);
 	        login.clicklogin();
 	}
-
-
-
+	
+	
+	@Given("^The user is on Home page after logged in using (.*) and (.*)$")
+	public void user_is_on_home_page(Integer rowNumber, String sheetName) throws IOException
+	{
+		login.clicksign_in();
+		ExcelReader reader = new ExcelReader();
+		List<Map<String, String>> excelData;
+		try {
+			excelData = reader.readExcelSheet(sheetName);
+			String username = excelData.get(rowNumber).get("username");
+	        System.out.println("username is "+ username);
+	        String password = excelData.get(rowNumber).get("password");
+	        System.out.println("password is "+ password);
+	        
+	        login.ValidenterUserNamePassWrd(username, password);
+	        login.clicklogin();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 
 }

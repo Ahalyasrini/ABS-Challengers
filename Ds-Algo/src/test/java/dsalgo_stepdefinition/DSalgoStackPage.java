@@ -13,18 +13,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class DSalgoStackPage extends DriverManager{
+public class DSalgoStackPage {
 	
 	StackPage stackPage = new StackPage();
-	
-	
-	
-	@Given("The user is on homepage")
-	public void the_user_is_on_homepage() {
-	
-		DriverManager.initializeDriver();
-		navigateHome();
-	}
 
 	@Then("The user should be redirected to {string} page")
 	public void the_user_should_be_redirected_to_page(String expectedpageurl) {
@@ -133,4 +124,5 @@ public class DSalgoStackPage extends DriverManager{
 
 	
 	
+		
 }

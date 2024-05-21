@@ -2,10 +2,16 @@ package dsalgo_stepdefinition;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+
+import dsalgoPOM.LoginInpage;
+import dsalgo_utilities.ExcelReader;
+
 import org.apache.commons.io.FileUtils;
 import dsalgo_webdriver_manager.DriverManager;
 import io.cucumber.java.After;
@@ -13,9 +19,16 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
 public class Hooks {
+	
+	DriverManager driverManager;
 
 	@Before
     public void beforeScenario(){
+		driverManager = new DriverManager();
+		driverManager.initializeDriver();
+		driverManager.navigateHome();
+		
+		    
         System.out.println("This will run before the Scenario");
         System.out.println(System.getProperty("user.dir"));
     }	
@@ -27,15 +40,16 @@ public class Hooks {
         	String scenarioName = scenario.getName().replaceFirst(" ","_");
 //        	byte[] sourcePath = ((TakesScreenshot)DriverManager.driver).getScreenshotAs(OutputType.BYTES);
 
-        	File scrFile = ((TakesScreenshot)DriverManager.driver).getScreenshotAs(OutputType.FILE);
+        	//File scrFile = ((TakesScreenshot)DriverManager.driver).getScreenshotAs(OutputType.FILE);
         	// Now you can do whatever you need to do with it, for example copy somewhere
         	System.out.println(System.getProperty("user.dir")+"\\src\\test\\resources\\Screenshots\\"+scenarioName+"_"+System.currentTimeMillis() +".png");
-        	FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+"\\src\\test\\resources\\Screenshots\\"+scenarioName + "_"+System.currentTimeMillis() +".png"));
+        	//FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+"\\src\\test\\resources\\Screenshots\\"+scenarioName + "_"+System.currentTimeMillis() +".png"));
         	
 //        	FileUtils.copyFile(sourcePath,  new File("c:\\tmp\\screenshot.png"));
 //        	System.out.println(System.getProperty("user.dir")+"image"+scenarioName +".png");
 //        	scenario.attach(sourcePath, System.getProperty("user.dir")+"image", scenarioName +".png");
         }
+        driverManager.getDriver().quit();
     }
 	
 	

@@ -17,7 +17,7 @@ public class DSalgoTreePage extends DriverManager {
 	
 	
 	
-	TreePage treepage=new TreePage(driver);
+	TreePage treepage=new TreePage(threadDriver.get());
 	@Given("USER is on Dalgo homepage  and verify the page title")
 	public void user_is_on_dalgo_homepage_and_verify_the_page_title_row_number() {
 	    treepage.getpageTitle();

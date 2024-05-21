@@ -1,6 +1,7 @@
 package dsalgo_webdriver_manager;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
@@ -9,11 +10,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
+import dsalgoPOM.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverManager {
-	public static WebDriver driver;
+	 public static ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>();
+	public WebDriver driver;
 	public static Properties prop;
 	public static String url;
 	public DriverManager()
@@ -24,14 +29,17 @@ public class DriverManager {
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//src//test//resources//config//globaldata.properties");
 //		FileInputStream fis = new FileInputStream("/Users/omkku/Desktop/Bhuvana_Selenium/Ds-Algo/"
 //				+ "src/test/resources/config/globaldata.properties");			
-		prop.load(fis);			
+		prop.load(fis);		
+		
 		} catch (IOException e) {
 			e.getMessage();
 		}
+		//initializeDriver();
 	}
-	public static void initializeDriver() 
+	
+	public void initializeDriver() 
 	{			   	    	
-	    
+		WebDriver driver = threadDriver.get();
 			if(driver==null)
 			{
 			if(prop.getProperty("browser").equalsIgnoreCase("chrome"))
@@ -46,17 +54,23 @@ public class DriverManager {
 			else if(prop.getProperty("browser").equalsIgnoreCase("Edge"))
 			{
 				driver = new EdgeDriver();
-			}			
+			}
+			threadDriver.set(driver);
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			url = prop.getProperty("Url");
 			driver.get(url);
+			
 			}
 		} 
 	
-	public void navigateHome()
+	public static void navigateHome()
 	{
-		driver.get(url + "home");
+		getDriver().get(url + "home");
+	}
+	
+	public static WebDriver getDriver() {
+		return threadDriver.get();
 	}
 }
 	

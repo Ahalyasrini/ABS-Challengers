@@ -14,7 +14,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class DSalgoLinkedListPage extends DriverManager {
-	LinkedListPage linkedlistPage=new LinkedListPage(driver);
+	LinkedListPage linkedlistPage=new LinkedListPage(threadDriver.get());
 	
 	
 	@When("The user clicks  Get Started button below the LinkedList and verify pagetitle")

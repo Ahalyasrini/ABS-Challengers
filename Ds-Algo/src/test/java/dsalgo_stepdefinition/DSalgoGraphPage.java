@@ -17,11 +17,7 @@ public class DSalgoGraphPage extends DriverManager{
 	
 	GraphPage graphPage = new GraphPage();
 	
-	@Given("User is on homepage")
-	public void user_is_on_homepage() {
-		DriverManager.initializeDriver();
-		navigateHome();
-	}
+
 
 	@When("User clicks {string} link")
 	public void user_clicks_link(String argument) {

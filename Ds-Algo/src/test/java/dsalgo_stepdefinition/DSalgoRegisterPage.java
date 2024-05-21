@@ -24,7 +24,7 @@ public class DSalgoRegisterPage extends DriverManager {
 	
 	@Given("The User opens Register Page")
 	public void the_user_opens_register_page() {
-		DriverManager.initializeDriver();
+		initializeDriver();
 		registerPage.registerPageUrl();
 		
 	}

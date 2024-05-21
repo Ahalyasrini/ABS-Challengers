@@ -20,8 +20,10 @@ public class DSalgoHomePage extends DriverManager{
 	@Given("The user should open the browser and enters the DS_Algo Portal")
 	public void open_the_browser()
 	{
-		DriverManager.initializeDriver();
+		initializeDriver();
 		}	
+	
+	
 	@Then("The user should be landed on the DS_Algo Get Started page with message {string}")
 	public void the_user_should_be_landed_on_the_ds_algo_get_started_page_with_message(String expectedmsg) {
 	

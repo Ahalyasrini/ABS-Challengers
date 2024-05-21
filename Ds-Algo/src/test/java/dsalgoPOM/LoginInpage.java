@@ -3,9 +3,14 @@ package dsalgoPOM;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import dsalgo_webdriver_manager.DriverManager;
+
 public class LoginInpage {
+	private WebDriver driver;
+	public LoginInpage() {
+		this.driver = DriverManager.getDriver();
+	}
 	
-	WebDriver driver;
 	 By sign_in =By.xpath("//a[@href=\"/login\"] ");
 	 By login_btn=By.xpath("//input[@type=\"submit\"]");
 	 By userName=By.xpath("//input[@name='username']");
@@ -15,16 +20,12 @@ public class LoginInpage {
 	 By loginmsg=By.xpath("//div[@class=\"alert alert-primary\"]");
 	
 	 
-	 public LoginInpage(WebDriver driver) {
-		  this.driver=driver;
-	 }
-	 
 	 public void clicksign_in() {
 		 driver.findElement(sign_in).click();
 		  }
 	 
 	 public void clicklogin() {
-		  driver.findElement(login_btn).click();
+		 driver.findElement(login_btn).click();
 	 }
 	
 

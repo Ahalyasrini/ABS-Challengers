@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,13 +13,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import dsalgo_commonlibraries.CommonLibraries;
 import dsalgo_webdriver_manager.DriverManager;
 
-public class QueuePage extends DriverManager {
+public class QueuePage {
+	
+	WebDriver driver = DriverManager.getDriver();
 	
 	By queueGetStarted = By.xpath("//a[@href='queue']");
 	By implementationofQinPython = By.xpath("//a[@href='implementation-lists']");
-	By implementationCollections = By.xpath("//a[@href='/queue/implementation-collections/']");
-	By implementationArray = By.xpath("//a[@href='/queue/Implementation-array/']");
-	By queueOperations = By.xpath("//a[@href='/queue/QueueOp/']");
+	By implementationCollections = By.xpath("//a[@href='implementation-collections']");
+	By implementationArray = By.xpath("//a[@href='Implementation-array']");
+	By queueOperations = By.xpath("//a[@href='QueueOp']");
 	By practicequestions = By.xpath("//a[@href='/queue/practice']");
 	protected By trybuttonWE = By.linkText("Try here>>>");
 	By formPageWE= By.id("answer_form");

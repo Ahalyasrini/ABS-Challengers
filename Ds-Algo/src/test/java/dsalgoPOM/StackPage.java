@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,15 +13,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import dsalgo_commonlibraries.CommonLibraries;
 import dsalgo_webdriver_manager.DriverManager;
 
-public class StackPage extends DriverManager {
+public class StackPage {
 	
-   
-
+	WebDriver driver = DriverManager.getDriver();
+	
 
 	By stackGetStarted = By.xpath("//a[@href='stack']");
 	By operationsInStack = By.xpath("//a[@href='operations-in-stack']");
-	By implementation = By.xpath("//a[@href='/stack/implementation/']");
-	By stackApplications = By.xpath("//a[@href='/stack/stack-applications/']");
+	By implementation = By.xpath("//a[@href='implementation']");
+	By stackApplications = By.xpath("//a[@href='stack-applications']");
 	By practicequestions = By.xpath("//a[@href='/stack/practice']");
 	protected By trybuttonWE = By.linkText("Try here>>>");
 	By formPageWE= By.id("answer_form");

@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		plugin = {"pretty", "html:target/Ahalya123.html"}, //reporting purpose
 		monochrome=false,  //console output colour
-		tags = "@homePage14",
+		tags = "@queue",
 //		tags = "@homePage or @treePage", //tags from feature file
 //		tags = "@homePage or @DataStructure", //tags from feature file
 		features = {"src/test/resources/features"}, //location of feature files
@@ -18,7 +18,7 @@ import io.cucumber.testng.CucumberOptions;
 public class TestRunner extends AbstractTestNGCucumberTests {
 
 	@Override
-    @DataProvider(parallel = false)
+    @DataProvider(parallel = true)
     public Object[][] scenarios() {
 				
 		return super.scenarios();	

@@ -13,15 +13,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class DSalgoQueuePage extends DriverManager{
+public class DSalgoQueuePage {
 	
 	QueuePage queuePage = new QueuePage();
-
-	@Given("The user is on the homepage")
-	public void the_user_is_on_the_homepage() {
-		DriverManager.initializeDriver();
-		navigateHome();
-	}
 
 	@When("User clicks on {string} link")
 	public void User_clicks_on_link(String argument) {

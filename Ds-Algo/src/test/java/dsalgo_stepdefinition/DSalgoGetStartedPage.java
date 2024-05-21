@@ -18,7 +18,7 @@ public class DSalgoGetStartedPage extends DriverManager
 		
 	}
 	
-public GetStartedPage getStartedPage = new GetStartedPage(driver);
+public GetStartedPage getStartedPage = new GetStartedPage(threadDriver.get());
 public WebElement dropdown;
 
 

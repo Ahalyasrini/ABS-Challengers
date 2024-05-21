@@ -33,7 +33,7 @@ public class DataStructurePage extends DriverManager {
 	By run_btn = By.xpath("//button[text()='Run']");
 	By practicequestions = By.xpath("//a[text()='Practice Questions']");
 	By consolemsg = By.xpath("//*[@id='output']");
-	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+	WebDriverWait wait = new WebDriverWait(threadDriver.get(),Duration.ofSeconds(10));
 	Alert alert;
 	WebElement txtarea;
 	public DataStructurePage()
