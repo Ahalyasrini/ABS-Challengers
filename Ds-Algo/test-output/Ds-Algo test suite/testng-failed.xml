@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="20" parallel="tests" name="Failed suite [Ds-Algo test suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="20" parallel="tests" name="Parallel Execution(failed)">
+    <classes>
+      <class name="dsalgo_stepdefinition.TestRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0 1 2 3 4 5 7 8 9 10 11 12 13 14"/>
+        </methods>
+      </class> <!-- dsalgo_stepdefinition.TestRunner -->
+    </classes>
+  </test> <!-- Parallel Execution(failed) -->
+</suite> <!-- Failed suite [Ds-Algo test suite] -->

@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import dsalgo_commonlibraries.CommonLibraries;
 import dsalgo_webdriver_manager.DriverManager;
 
-public class GraphPage extends DriverManager {
+public class GraphPage {
 	
 	By graphGetStarted = By.xpath("//a[@href='graph']");
 	By graph = By.xpath("//a[@href='graph']");
@@ -29,9 +30,15 @@ public class GraphPage extends DriverManager {
 	public By runItButtonWE =By.xpath("//button[@onclick=\"runit()\"]");
 	By consolemsg = By.xpath("//*[@id='output']");
 	By signOut = By.xpath("//a[@href='/logout']");
-	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+	public WebDriverWait wait;
+	public WebDriver driver;
 	Alert alert;
 	WebElement txtarea;
+	
+	public GraphPage (WebDriver driver){
+		this.driver = driver;
+		wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+	}
 	
 public void clickHyperLink(String argument) {
 		    if(argument.equals("Get Started")) 

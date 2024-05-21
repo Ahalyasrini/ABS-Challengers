@@ -7,6 +7,7 @@ import java.util.Map;
 import org.junit.Assert;
 
 import dsalgoPOM.ArrayPage;
+import dsalgoPOM.DataStructurePage;
 import dsalgo_utilities.ExcelReader;
 import dsalgo_webdriver_manager.DriverManager;
 import io.cucumber.datatable.DataTable;
@@ -15,12 +16,17 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class DSalgoArrayPage extends DriverManager {
+public class DSalgoArrayPage extends BaseTest {
 	
-	ArrayPage arraypage=new ArrayPage(driver);
+public ArrayPage arraypage;
+	
+	public DSalgoArrayPage() {
+		arraypage=new ArrayPage(getDriver());
+	}
+	
 	@Given("User is on Dalgo homepage  and verify the page title")
 	public void user_is_on_dalgo_homepage_and_verify_the_page_title_row_number() {
-		navigateHome();
+		//navigateHome();
 	    arraypage.getpageTitle();
 	}
 

@@ -1,6 +1,16 @@
 @stack
 Feature: User launch DSAlgo application and test stack page
 
+Background: The login  steps
+    Given The user should open the browser and enters the DS_Algo Portal  
+    Then The user should be landed on the DS_Algo Get Started page with message "You are at the right place"
+    When User clicks on get started button
+    Then User should be landed on the data structure page with title "NumpyNinja"
+      Given The  user land on DS Algo Sign in page
+      When The user clicks login button after entering valid credentials "abschallengers" and "numpyninja17"
+      Then The user should land in Data Structure Home Page "You are logged in"
+  
+
 
 @stack
 Scenario: The user is able to naviagte to Stack page
@@ -10,12 +20,19 @@ Scenario: The user is able to naviagte to Stack page
 
 @stack
 Scenario: The user is able to navigate to Operations in Stack page
+Given The user is on homepage
+	When The user clicks "Get Started" link
+	Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/" page 
 	Given The user is on the "Stack" page 
 	When The user clicks "Operations in Stack" link
 	Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/operations-in-stack/" page
 
-@stack
+@stack123
 Scenario: The user is able to navigate to a page having an tryEditor from Opertaions in Stack page 
+Given The user is on homepage
+	When The user clicks "Get Started" link
+	Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/" page 
+	Given The user is on the "Stack" page 
 	Given The user is on the "Opertions in Stack" page
 	When The user clicks "Try here>>>" button on "operations in stack" page
 	Then The user is on the "TryEditor" page 

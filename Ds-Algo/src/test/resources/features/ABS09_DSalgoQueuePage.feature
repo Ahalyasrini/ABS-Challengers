@@ -1,6 +1,15 @@
 @queue
 Feature: User launch DSAlgo application and Test Queue page
 
+Background: The login  steps
+    Given The user should open the browser and enters the DS_Algo Portal  
+    Then The user should be landed on the DS_Algo Get Started page with message "You are at the right place"
+    When User clicks on get started button
+    Then User should be landed on the data structure page with title "NumpyNinja"
+      Given The  user land on DS Algo Sign in page
+      When The user clicks login button after entering valid credentials "abschallengers" and "numpyninja17"
+      Then The user should land in Data Structure Home Page "You are logged in"
+
 @queue
 Scenario: The user is able to naviagte to Queue page
 	Given The user is on the homepage

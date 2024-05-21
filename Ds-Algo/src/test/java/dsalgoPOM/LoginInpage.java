@@ -9,7 +9,7 @@ public class LoginInpage {
 	 By sign_in =By.xpath("//a[@href=\"/login\"] ");
 	 By login_btn=By.xpath("//input[@type=\"submit\"]");
 	 By userName=By.xpath("//input[@name='username']");
-	 By signIn=By.xpath("//a[@href=\"/login\"] ");
+//	 By signIn=By.xpath("//a[@href=\"/login\"] ");
 	 By passWord=By.xpath("//input[@type=\"password\"]");
 	 By alertmsg=By.xpath("//div[@class=\"alert alert-primary\"]");
 	 By loginmsg=By.xpath("//div[@class=\"alert alert-primary\"]");
@@ -20,7 +20,10 @@ public class LoginInpage {
 	 }
 	 
 	 public void clicksign_in() {
+		 System.out.println("******************************Before sing in **************************************");
 		 driver.findElement(sign_in).click();
+		 System.out.println("******************************After sing in **************************************");
+		 
 		  }
 	 
 	 public void clicklogin() {

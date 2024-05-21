@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,12 +13,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import dsalgo_commonlibraries.CommonLibraries;
 import dsalgo_webdriver_manager.DriverManager;
 
-public class StackPage extends DriverManager {
-	
-   
+public class StackPage   {
+	public	WebDriverWait wait ;
+	public WebDriver driver;
+	public StackPage(WebDriver driver) {
+	   this.driver = driver;
+	   wait = new WebDriverWait(this.driver,Duration.ofSeconds(10));
+   }
 
 
 	By stackGetStarted = By.xpath("//a[@href='stack']");
+//	By operationsInStack = By.xpath("//a[@href='/stack/operations-in-stack/']");
 	By operationsInStack = By.xpath("//a[@href='operations-in-stack']");
 	By implementation = By.xpath("//a[@href='/stack/implementation/']");
 	By stackApplications = By.xpath("//a[@href='/stack/stack-applications/']");
@@ -32,7 +38,7 @@ public class StackPage extends DriverManager {
 	protected By editTextArea = By.xpath("//form[@id='answer_form']/div/div/div/textarea");
 	public By runItButtonWE =By.xpath("//button[@onclick=\"runit()\"]");
 	By consolemsg = By.xpath("//*[@id='output']");
-	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+
 	Alert alert;
 	WebElement txtarea;
 	

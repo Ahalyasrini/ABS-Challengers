@@ -1,27 +1,32 @@
 package dsalgo_stepdefinition;
 
+import org.testng.AssertJUnit;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Assert;
-
 import dsalgoPOM.DataStructurePage;
+import dsalgoPOM.LoginInpage;
 import dsalgo_utilities.ExcelReader;
 import dsalgo_webdriver_manager.DriverManager;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class DSalgoDataStructurePage extends DriverManager {
+public class DSalgoDataStructurePage extends BaseTest {
+public DataStructurePage datastructurepage;
 	
-    DataStructurePage datastructurepage = new DataStructurePage();
+	public DSalgoDataStructurePage() {
+		datastructurepage = new DataStructurePage(getDriver());
+	}
+	
+   
    // Logger logger =(Logger) LogManager.getLogger("");
 	@Given("User is on the {string} homepage")
 	public void user_is_on_the_homepage(String expectedhomepagetitle) {		
 		String homepagetitle = datastructurepage.getHomePageTitle();
 		System.out.println(homepagetitle);
-		Assert.assertEquals(homepagetitle, expectedhomepagetitle);		
+		AssertJUnit.assertEquals(homepagetitle, expectedhomepagetitle);		
 	}
 	@When("User clicks on Data Structures dropdown")
 	public void user_clicks_on_data_structures_dropdown() {
@@ -45,7 +50,7 @@ public class DSalgoDataStructurePage extends DriverManager {
 	public void user_is_on_the_data_structures_introduction_page(String expectedpagename) {
 		String actualpagename = datastructurepage.datastructurepagename();
 		System.out.println(actualpagename);
-		Assert.assertEquals(actualpagename, expectedpagename);
+		AssertJUnit.assertEquals(actualpagename, expectedpagename);
 	}
 	@When("User clicks on Time Complexity link")
 	public void user_clicks_on_Time_Complexity_link() {
@@ -54,7 +59,7 @@ public class DSalgoDataStructurePage extends DriverManager {
 	@Then("User should be navigated to {string} page")
 	public void user_should_be_navigated_to_page(String expectedpageurl) {
 		String actualpageurl = datastructurepage.getcurrentpage();
-		Assert.assertEquals(actualpageurl, expectedpageurl);
+		AssertJUnit.assertEquals(actualpageurl, expectedpageurl);
 	}
 	@Then("User clicks on Try here button")
 	public void user_clicks_on_button() {		
@@ -64,7 +69,7 @@ public class DSalgoDataStructurePage extends DriverManager {
 	@Given("User is on the text editor screen {string}")
 	public void user_is_on_the_text_editor_screen(String expectedpageurl) {	    
 		String actualpageurl = datastructurepage.getcurrentpage();
-		Assert.assertEquals(actualpageurl, expectedpageurl);
+		AssertJUnit.assertEquals(actualpageurl, expectedpageurl);
 	}
 	
 	@When("^User enters some text in the incorrect format (.+) in the text editor from the excel sheet (.+)$")
@@ -84,7 +89,7 @@ public class DSalgoDataStructurePage extends DriverManager {
 	public void a_pop_up_window_should_be_displayed_with_entered_text_being_displayed_in_the_popup_message(String expectedpopupmsg) {
 		String actualpopupmsg = datastructurepage.alertpopup();
 		System.out.println(actualpopupmsg);
-		Assert.assertEquals(actualpopupmsg, expectedpopupmsg);
+		AssertJUnit.assertEquals(actualpopupmsg, expectedpopupmsg);
 	}
 
 	@Then("User clicks on OK button in the popup")
@@ -123,7 +128,7 @@ public class DSalgoDataStructurePage extends DriverManager {
 	public void practice_questions_page_should_be_displayed_with_the_url(String expectedurl) {
 		String actualurl = datastructurepage.getcurrentpage();
 		System.out.println(actualurl);
-		Assert.assertEquals(actualurl, expectedurl);
+		AssertJUnit.assertEquals(actualurl, expectedurl);
 	}
 
 }

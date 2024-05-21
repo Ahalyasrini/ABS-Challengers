@@ -7,6 +7,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,6 +17,7 @@ import dsalgo_commonlibraries.CommonLibraries;
 import dsalgo_webdriver_manager.DriverManager;
 
 public class DataStructurePage extends DriverManager {	
+	WebDriver driver;
 	By signin = By.xpath("//a[@href='/login']");
 	By username = By.id("id_username");
 	By pwd = By.id("id_password");
@@ -33,12 +35,15 @@ public class DataStructurePage extends DriverManager {
 	By run_btn = By.xpath("//button[text()='Run']");
 	By practicequestions = By.xpath("//a[text()='Practice Questions']");
 	By consolemsg = By.xpath("//*[@id='output']");
-	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+	public WebDriverWait wait;
 	Alert alert;
 	WebElement txtarea;
-	public DataStructurePage()
+	
+	
+	public DataStructurePage(WebDriver driver)
 	{
-		
+		  this.driver=driver;
+		  wait = new WebDriverWait(this.driver,Duration.ofSeconds(10));
 	}
 	public String getHomePageTitle()
 	{
@@ -68,7 +73,7 @@ public class DataStructurePage extends DriverManager {
 	
 	public void click_ds_getstarted()
 	{
-		driver.findElement(datastructure_dropdown).click();
+//		driver.findElement(datastructure_dropdown).click();
 		driver.findElement(datastructures_getstarted).click();
 	}
 	public String datastructurepagename()

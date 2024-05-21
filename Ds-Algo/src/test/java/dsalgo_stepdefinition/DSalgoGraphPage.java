@@ -13,14 +13,18 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class DSalgoGraphPage extends DriverManager{
+public class DSalgoGraphPage extends BaseTest{
 	
-	GraphPage graphPage = new GraphPage();
+	public GraphPage graphPage ;
+	
+	public DSalgoGraphPage() {
+		graphPage = new GraphPage(getDriver());
+	}
 	
 	@Given("User is on homepage")
 	public void user_is_on_homepage() {
-		DriverManager.initializeDriver();
-		navigateHome();
+//		DriverManager.initializeDriver();
+//		navigateHome();
 	}
 
 	@When("User clicks {string} link")

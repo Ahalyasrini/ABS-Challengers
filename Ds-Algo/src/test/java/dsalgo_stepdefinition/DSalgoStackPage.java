@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 
 import dsalgoPOM.StackPage;
 import dsalgo_utilities.ExcelReader;
@@ -13,17 +14,21 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class DSalgoStackPage extends DriverManager{
+public class DSalgoStackPage extends BaseTest{
 	
-	StackPage stackPage = new StackPage();
+	public StackPage stackPage;
 	
+	public DSalgoStackPage() {
+		stackPage = new StackPage(getDriver());
+	}
+
 	
-	
+
 	@Given("The user is on homepage")
 	public void the_user_is_on_homepage() {
 	
-		DriverManager.initializeDriver();
-		navigateHome();
+//		DriverManager.initializeDriver();
+//		navigateHome();
 	}
 
 	@Then("The user should be redirected to {string} page")

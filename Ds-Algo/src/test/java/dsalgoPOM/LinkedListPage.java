@@ -50,7 +50,7 @@ public class LinkedListPage {
 		driver.findElement(GetStartedBtn).click();
 	}
 	public void getLinkedListtitle() {
-		System.out.println(driver.findElement(LinkedlistTitle));
+		System.out.println(driver.findElement(LinkedlistTitle).getText());
 	}
 	
 	public void validatelinkedListLinks() {

@@ -69,7 +69,7 @@ public class TreePage {
 	 }
 	 
 	public void treepagetitle() {
-		System.out.println(driver.findElement(treetitle));
+		System.out.println(driver.findElement(treetitle).getText());
 	}
 	
 	public void validatetreelinks() {

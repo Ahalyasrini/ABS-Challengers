@@ -14,11 +14,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class DSalgoLoginInpage extends DriverManager {
+public class DSalgoLoginInpage extends BaseTest {
 	
-	public  LoginInpage login= new  LoginInpage(driver);
+	public  LoginInpage login;
 	
-	
+	public DSalgoLoginInpage() {
+		login= new LoginInpage(getDriver());
+	}
 	@Given("The user is on the DS Algo Sign in Page")
 	public void the_user_is_on_the_ds_algo_sign_in_page() {
 	   login.clicksign_in();
@@ -115,7 +117,15 @@ public class DSalgoLoginInpage extends DriverManager {
 
 	@Given("The  user land on DS Algo Sign in page")
 	public void the_user_lands_on_ds_algo_dign_in_page() {
-	    login.clicksign_in();
+	    try {
+			Thread.sleep(1000);
+			login.clicksign_in();
+		    
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
 	}
 
 //	@When("^The user clicks login button after entering valid (.*)and valid (.*)$")
@@ -145,6 +155,11 @@ public class DSalgoLoginInpage extends DriverManager {
 	}
 
 
+	@When("The user clicks login button after entering valid credentials {string} and {string}")
+	public void user_enters_valid_credentials_and_clicks_register_button_from_row(String userName, String passWord) throws IOException {
+	        login.ValidenterUserNamePassWrd(userName, passWord);
+	        login.clicklogin();
+	}
 
 
 }

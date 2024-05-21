@@ -3,12 +3,14 @@ package dsalgoPOM;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
+import dsalgo_stepdefinition.BaseTest;
 import dsalgo_webdriver_manager.DriverManager;
 
-public class RegisterPage extends DriverManager {
+public class RegisterPage {
 	
-		
+	public WebDriver driver;
 	By UserName = By.xpath("//input[@name='username']");
 	By Psswd = By.xpath("//input[@name='password1']");
 	By Psswdcnfrm = By.xpath("//input[@name='password2']");
@@ -17,12 +19,11 @@ public class RegisterPage extends DriverManager {
 	By RegisterdName = By.xpath("//div[contains(text(),'New Account Created')]");
 	By SignOut = By.xpath("//a[contains(@href, 'logout')]");
 	
-	public RegisterPage() {
-		//this.driver = driver;
+	public RegisterPage(WebDriver driver) {
+		this.driver = driver;
 	}
-	public void registerPageUrl() {
+	public void registerPageUrl(String url) {
 		driver.get(url + "register");
-		
 	}
 	
 	public void clickRegisterButton() {

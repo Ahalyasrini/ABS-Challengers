@@ -1,6 +1,12 @@
 Feature: Register Page validation
 
-@register 
+Background: The login  steps
+    Given The user should open the browser and enters the DS_Algo Portal  
+    Then The user should be landed on the DS_Algo Get Started page with message "You are at the right place"
+    When User clicks on get started button
+    Then User should be landed on the data structure page with title "NumpyNinja"
+
+@register
 Scenario: Opening Register Page
     Given The User opens Register Page
     When The User clicks "Register" button with all fields empty

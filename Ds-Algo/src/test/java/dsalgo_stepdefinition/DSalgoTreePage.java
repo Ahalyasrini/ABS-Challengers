@@ -13,15 +13,17 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class DSalgoTreePage extends DriverManager {
+public class DSalgoTreePage extends BaseTest {
+	public TreePage treepage;
 	
+	public  DSalgoTreePage()
+	{ treepage=new TreePage(getDriver());
 	
-	
-	TreePage treepage=new TreePage(driver);
+	}
 	@Given("USER is on Dalgo homepage  and verify the page title")
 	public void user_is_on_dalgo_homepage_and_verify_the_page_title_row_number() {
 	    treepage.getpageTitle();
-	    navigateHome();
+	  //  navigateHome();
 	}
   
 	@When("The user clicks  Get Started button below the treeList and verify pagetitle")
