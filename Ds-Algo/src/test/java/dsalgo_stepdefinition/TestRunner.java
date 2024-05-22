@@ -10,10 +10,10 @@ import io.cucumber.testng.CucumberOptions;
 //@RunWith(Cucumber.class)
 @CucumberOptions(
 		plugin = {"pretty", "html:target/Ahalya123.html"}, //reporting purpose
-		monochrome=false,  //console output colour
-	//	tags = "@loginPage or @homePage14 or @register ",
-	tags = "@homePage or @homePage14 or @register or @loginPage or @DataStructure or @arrayPage or @LinkedlistPage or @stack or @queue or "
-			+ "  @treePage or @graph", //tags from feature file
+		monochrome=false , //console output colour
+	//tags = "@loginPage or @homePage14 or @register ",
+	//tags = "@homePage or @homePage14 or @register or @loginPage or @DataStructure or @arrayPage or @LinkedlistPage or @stack or @queue or "
+		//	+ "  @treePage or @graph", //tags from feature file
 //		tags = "@homePage or @DataStructure", //tags from feature file
 //				@homePage14 or @register or 
 		features = {"src/test/resources/features"}, //location of feature files
