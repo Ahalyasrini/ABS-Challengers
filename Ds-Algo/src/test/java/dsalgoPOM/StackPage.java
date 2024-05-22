@@ -25,18 +25,18 @@ public class StackPage   {
 	By stackGetStarted = By.xpath("//a[@href='stack']");
 //	By operationsInStack = By.xpath("//a[@href='/stack/operations-in-stack/']");
 	By operationsInStack = By.xpath("//a[@href='operations-in-stack']");
-	By implementation = By.xpath("//a[@href='/stack/implementation/']");
+	By implementation = By.xpath("//a[@href='implementation']");
 	By stackApplications = By.xpath("//a[@href='/stack/stack-applications/']");
 	By practicequestions = By.xpath("//a[@href='/stack/practice']");
-	protected By trybuttonWE = By.linkText("Try here>>>");
+     By trybuttonWE = By.linkText("Try here>>>");
 	By formPageWE= By.id("answer_form");
 	By stackpageWE = By.xpath("//h4[@class='bg-secondary text-white']");
 	By stackPageWE1 = By.xpath("//p[@class='bg-secondary text-white']");
 	By texteditorarea = By.xpath("//div//pre[@class='CodeMirror-line-like']/span");
 	By txteditorarea_1 = By.xpath("//form[@id='answer_form']//pre[@class=' CodeMirror-line ']/span/span");
 	By tryhere_btn = By.xpath("//a[@href='/tryEditor']");
-	protected By editTextArea = By.xpath("//form[@id='answer_form']/div/div/div/textarea");
-	public By runItButtonWE =By.xpath("//button[@onclick=\"runit()\"]");
+	 By editTextArea = By.xpath("//form[@id='answer_form']/div/div/div/textarea");
+ By runItButtonWE =By.xpath("//button[@onclick=\"runit()\"]");
 	By consolemsg = By.xpath("//*[@id='output']");
 
 	Alert alert;
