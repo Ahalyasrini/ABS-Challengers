@@ -27,19 +27,25 @@ Given The user is on homepage
 	When The user clicks "Operations in Stack" link
 	Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/operations-in-stack/" page
 
-@stack123
+@stack
 Scenario: The user is able to navigate to a page having an tryEditor from Opertaions in Stack page 
 Given The user is on homepage
 	When The user clicks "Get Started" link
 	Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/" page 
 	Given The user is on the "Stack" page 
-	Given The user is on the "Opertions in Stack" page
+	When The user clicks "Operations in Stack" link
 	When The user clicks "Try here>>>" button on "operations in stack" page
 	Then The user is on the "TryEditor" page 
 	Then The user should have a button with text "Run" on the page
 
 @stack
 Scenario Outline: The user is able to see the error message in pop up window with incorrect python code
+Given The user is on homepage
+	When The user clicks "Get Started" link
+	Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/" page 
+	Given The user is on the "Stack" page 
+	When The user clicks "Operations in Stack" link
+	When The user clicks "Try here>>>" button on "operations in stack" page
   Given The user is on the "tryEditor" page
   When The user enters inValid python <rowNumber> in the text editor from the excel sheet <SheetName>
   And clicks Run button
@@ -53,6 +59,12 @@ Scenario Outline: The user is able to see the error message in pop up window wit
     
  @stack
 Scenario Outline: The user is able to see the output in console with proper python code
+Given The user is on homepage
+	When The user clicks "Get Started" link
+	Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/" page 
+	Given The user is on the "Stack" page 
+	When The user clicks "Operations in Stack" link
+	When The user clicks "Try here>>>" button on "operations in stack" page
   Given The user is on the "tryEditor" page
   When The user enters Valid python <rowNumber> in the text editor from the excel sheet <SheetName>
   And clicks Run button
@@ -64,13 +76,20 @@ Scenario Outline: The user is able to see the output in console with proper pyth
     
  @stack
  Scenario: The user is able to navigate to Implementations in Stack page
+ Given The user is on homepage
+	When The user clicks "Get Started" link
+	Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/" page 
   Given The user is on the "Stack" page 
   When The user clicks "Implementation" link
   Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/implementation/" page  
  
-@stack  
+@stack
 Scenario: The user is able to navigate to a page having an tryEditor from Implementation page 
-  Given The user is on the "Implementation" page 
+   Given The user is on homepage
+	When The user clicks "Get Started" link
+	Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/" page 
+  Given The user is on the "Stack" page 
+  When The user clicks "Implementation" link
   When The user clicks "Try Here>>>" button on "Implementation" page
  Then The user is on the "TryEditor" page 
 	Then The user should have a button with text "Run" on the page
@@ -78,6 +97,12 @@ Scenario: The user is able to navigate to a page having an tryEditor from Implem
 
 @stack
 Scenario Outline: The user is able to see the error message in pop up window with incorrect python code
+ Given The user is on homepage
+	When The user clicks "Get Started" link
+	Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/" page 
+  Given The user is on the "Stack" page 
+  When The user clicks "Implementation" link
+  When The user clicks "Try Here>>>" button on "Implementation" page
   Given The user is on the "tryEditor" page
   When The user enters inValid python <rowNumber> in the text editor from the excel sheet <SheetName>
   And clicks Run button
@@ -91,6 +116,12 @@ Scenario Outline: The user is able to see the error message in pop up window wit
   
 @stack
 Scenario Outline: The user is able to see the output in console with proper python code
+ Given The user is on homepage
+	When The user clicks "Get Started" link
+	Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/" page 
+  Given The user is on the "Stack" page 
+  When The user clicks "Implementation" link
+  When The user clicks "Try Here>>>" button on "Implementation" page
   Given The user is on the "tryEditor" page
   When The user enters Valid python <rowNumber> in the text editor from the excel sheet <SheetName>
   And clicks Run button
@@ -104,13 +135,22 @@ Scenario Outline: The user is able to see the output in console with proper pyth
     
 @stack
 Scenario: The user is able to navigate to Applications in Stack page
+ Given The user is on homepage
+	When The user clicks "Get Started" link
+	Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/" page 
   Given The user is on the "Stack" page 
-  When The user clicks "Applications" link
+   When The user clicks "Implementation" link
+    When The user clicks "Applications" link
   Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/stack-applications/" page 
   
 @stack
 Scenario: The user is able to navigate to a page having an tryEditor from Applications page 
-  Given The user is on the "Applications" page 
+ Given The user is on homepage
+	When The user clicks "Get Started" link
+	Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/" page 
+	  Given The user is on the "Stack" page 
+	   When The user clicks "Implementation" link
+  When The user clicks "Applications" link
   When The user clicks "Try Here>>>" button on "Applications" page
   Then The user is on the "TryEditor" page 
 	Then The user should have a button with text "Run" on the page
@@ -118,6 +158,13 @@ Scenario: The user is able to navigate to a page having an tryEditor from Applic
 
 @stack
 Scenario Outline: The user is able to see the error message in pop up window with incorrect python code
+ Given The user is on homepage
+	When The user clicks "Get Started" link
+	Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/" page 
+	  Given The user is on the "Stack" page 
+	   When The user clicks "Implementation" link
+  When The user clicks "Applications" link
+  When The user clicks "Try Here>>>" button on "Applications" page
   Given The user is on the "tryEditor" page
   When The user enters inValid python <rowNumber> in the text editor from the excel sheet <SheetName>
   And clicks Run button
@@ -131,6 +178,13 @@ Scenario Outline: The user is able to see the error message in pop up window wit
   
 @stack
 Scenario Outline: The user is able to see the output in console with proper python code
+ Given The user is on homepage
+	When The user clicks "Get Started" link
+	Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/" page 
+	  Given The user is on the "Stack" page 
+	   When The user clicks "Implementation" link
+  When The user clicks "Applications" link
+  When The user clicks "Try Here>>>" button on "Applications" page
   Given The user is on the "tryEditor" page
   When The user enters Valid python <rowNumber> in the text editor from the excel sheet <SheetName>
   And clicks Run button
@@ -141,9 +195,13 @@ Scenario Outline: The user is able to see the output in console with proper pyth
     |1|Text_Try_Editor|
   
     
-@stack 
+@stack
 Scenario: The user is able to navigate to Practice Questions in Stack page
+ Given The user is on homepage
+	When The user clicks "Get Started" link
+	Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/" page 
   Given The user is on the "Stack" page 
+   When The user clicks "Implementation" link
   When The user clicks "Practice Questions" link
   Then The user should be redirected to "https://dsportalapp.herokuapp.com/stack/practice" page 
 

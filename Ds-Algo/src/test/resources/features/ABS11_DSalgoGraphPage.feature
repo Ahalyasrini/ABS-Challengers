@@ -1,7 +1,8 @@
 @graph
 Feature: User launch DSAlgo application and Test Queue page
 
-Background: The login  steps
+
+   Background: The login  steps
     Given The user should open the browser and enters the DS_Algo Portal  
     Then The user should be landed on the DS_Algo Get Started page with message "You are at the right place"
     When User clicks on get started button
@@ -18,13 +19,23 @@ Scenario: The user is able to naviagte to Graph page
 	
 @graph
 Scenario: Navigating to Graph page and clicking the Try here button
-    Given User is on "Graph" page
+	Given User is on homepage
+	When User clicks "Get Started" link 
+	Then User should navigate to "https://dsportalapp.herokuapp.com/graph/" page 
+	 Given User is on "Graph" page
     When User clicks "Graph" link
     Then User should navigate to "https://dsportalapp.herokuapp.com/graph/graph/" page
     Then User clicks "Try here>>>" button 
     
 @graph
 Scenario Outline: The user is able to see the error message in pop up window with incorrect python code
+	Given User is on homepage
+	When User clicks "Get Started" link 
+	Then User should navigate to "https://dsportalapp.herokuapp.com/graph/" page 
+	 Given User is on "Graph" page
+    When User clicks "Graph" link
+    Then User should navigate to "https://dsportalapp.herokuapp.com/graph/graph/" page
+    Then User clicks "Try here>>>" button 
   Given User is on "tryEditor" page
   When User enters inValid python <rowNumber> in text editor from the excel sheet <SheetName>
   And clicks on the Run button
@@ -38,6 +49,13 @@ Scenario Outline: The user is able to see the error message in pop up window wit
     
 @graph
 Scenario Outline: The user is able to see the output in console with proper python code
+	Given User is on homepage
+	When User clicks "Get Started" link 
+	Then User should navigate to "https://dsportalapp.herokuapp.com/graph/" page 
+	 Given User is on "Graph" page
+    When User clicks "Graph" link
+    Then User should navigate to "https://dsportalapp.herokuapp.com/graph/graph/" page
+    Then User clicks "Try here>>>" button 
   Given User is on "tryEditor" page
   When User enters Valid python <rowNumber> in text editor from the excel sheet <SheetName>
   And clicks on the Run button
@@ -49,13 +67,25 @@ Scenario Outline: The user is able to see the output in console with proper pyth
     
 @graph
 Scenario: Navigating to Graph Representations page and clicking the Try here button
+	Given User is on homepage
+	When User clicks "Get Started" link 
+	Then User should navigate to "https://dsportalapp.herokuapp.com/graph/" page 
     Given User is on "Graph" page
+     When User clicks "Graph" link
     When User clicks "Graph Representations" link
     Then User should navigate to "https://dsportalapp.herokuapp.com/graph/graph-representations/" page
     Then User clicks "Try here>>>" button 
     
 @graph
 Scenario Outline: The user is able to see the error message in pop up window with incorrect python code
+	Given User is on homepage
+	When User clicks "Get Started" link 
+	Then User should navigate to "https://dsportalapp.herokuapp.com/graph/" page 
+    Given User is on "Graph" page
+     When User clicks "Graph" link
+    When User clicks "Graph Representations" link
+    Then User should navigate to "https://dsportalapp.herokuapp.com/graph/graph-representations/" page
+      Then User clicks "Try here>>>" button 
   Given User is on "tryEditor" page
   When User enters inValid python <rowNumber> in text editor from the excel sheet <SheetName>
   And clicks on the Run button
@@ -69,6 +99,14 @@ Scenario Outline: The user is able to see the error message in pop up window wit
     
 @graph
 Scenario Outline: The user is able to see the output in console with proper python code
+	Given User is on homepage
+	When User clicks "Get Started" link 
+	Then User should navigate to "https://dsportalapp.herokuapp.com/graph/" page 
+    Given User is on "Graph" page
+     When User clicks "Graph" link
+    When User clicks "Graph Representations" link
+    Then User should navigate to "https://dsportalapp.herokuapp.com/graph/graph-representations/" page
+      Then User clicks "Try here>>>" button 
   Given User is on "tryEditor" page
   When User enters Valid python <rowNumber> in text editor from the excel sheet <SheetName>
   And clicks on the Run button
@@ -81,7 +119,11 @@ Scenario Outline: The user is able to see the output in console with proper pyth
 
 @graph
 Scenario: The user is able to navigate to Practice Questions in Graph page
-  Given User is on "Queue" page 
+  Given User is on homepage
+	When User clicks "Get Started" link 
+	Then User should navigate to "https://dsportalapp.herokuapp.com/graph/" page 
+    Given User is on "Graph" page
+     When User clicks "Graph" link
   When User clicks "Practice Questions" link
   Then User should navigate to "https://dsportalapp.herokuapp.com/graph/practice" page 
   And The user clicks on signout 

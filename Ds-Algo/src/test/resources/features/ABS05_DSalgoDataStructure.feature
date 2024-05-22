@@ -23,7 +23,7 @@ Scenario Outline: Get started page of Data Structure
     #|Graph|
     Then User clicks on get started button on the data structures pane  
     
-@DataStructure123
+@DataStructure
 Scenario: Data structures introduction page
     Then User clicks on get started button on the data structures pane  
     Given User is on the "Data Structures-Introduction"
@@ -49,7 +49,7 @@ Scenario Outline: Text editor screen
 Examples:
     |rowNumber|SheetName|
     |1|Text_Try_Editor|
-
+@DataStructure
 Scenario: Console message and Practice Questions page
  Then User clicks on get started button on the data structures pane  
     Given User is on the "Data Structures-Introduction"

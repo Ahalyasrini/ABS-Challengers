@@ -17,19 +17,19 @@ public class QueuePage {
 	
 	By queueGetStarted = By.xpath("//a[@href='queue']");
 	By implementationofQinPython = By.xpath("//a[@href='implementation-lists']");
-	By implementationCollections = By.xpath("//a[@href='/queue/implementation-collections/']");
-	By implementationArray = By.xpath("//a[@href='/queue/Implementation-array/']");
-	By queueOperations = By.xpath("//a[@href='/queue/QueueOp/']");
+	By implementationCollections = By.xpath("//a[@href='implementation-collections']");
+	By implementationArray = By.xpath("//a[@href='Implementation-array']");
+	By queueOperations = By.xpath("//a[@href='QueueOp']");
 	By practicequestions = By.xpath("//a[@href='/queue/practice']");
-	protected By trybuttonWE = By.linkText("Try here>>>");
+	By trybuttonWE = By.linkText("Try here>>>");
 	By formPageWE= By.id("answer_form");
 	By queuepageWE = By.xpath("//h4[@class='bg-secondary text-white']");
 	By queuePageWE1 = By.xpath("//p[@class='bg-secondary text-white']");
 	By texteditorarea = By.xpath("//div//pre[@class='CodeMirror-line-like']/span");
 	By txteditorarea_1 = By.xpath("//form[@id='answer_form']//pre[@class=' CodeMirror-line ']/span/span");
 	By tryhere_btn = By.xpath("//a[@href='/tryEditor']");
-	protected By editTextArea = By.xpath("//form[@id='answer_form']/div/div/div/textarea");
-	public By runItButtonWE =By.xpath("//button[@onclick=\"runit()\"]");
+	 By editTextArea = By.xpath("//form[@id='answer_form']/div/div/div/textarea");
+    By runItButtonWE =By.xpath("//button[@onclick=\"runit()\"]");
 	By consolemsg = By.xpath("//*[@id='output']");
 	public WebDriverWait wait ;
 	public WebDriver driver;
