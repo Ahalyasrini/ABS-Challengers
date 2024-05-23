@@ -9,6 +9,7 @@ import org.junit.Assert;
 
 import dsalgoPOM.HomePage;
 import dsalgoPOM.RegisterPage;
+import dsalgo_driver.BaseTest;
 import dsalgo_utilities.ExcelReader;
 import dsalgo_webdriver_manager.DriverManager;
 import io.cucumber.java.en.Given;

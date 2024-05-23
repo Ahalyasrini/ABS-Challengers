@@ -10,6 +10,7 @@ Feature: User launch DSAlgo application and Test Queue page
       Given The  user land on DS Algo Sign in page
       When The user clicks login button after entering valid credentials "abschallengers" and "numpyninja17"
       Then The user should land in Data Structure Home Page "You are logged in"
+      
 
 @graph
 Scenario: The user is able to naviagte to Graph page

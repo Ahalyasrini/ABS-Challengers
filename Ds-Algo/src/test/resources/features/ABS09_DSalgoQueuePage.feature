@@ -26,7 +26,7 @@ Given The user is on the homepage
     Then User should be navigate to "https://dsportalapp.herokuapp.com/queue/implementation-lists/" page
     Then User clicks on "Try here>>>" button 
     
-@queue
+@queue14
 Scenario Outline: The user is able to see the error message in pop up window with incorrect python code
 Given The user is on the homepage
 	When User clicks on "Get Started" link 
@@ -46,7 +46,7 @@ Given The user is on the homepage
  		|rowNumber|SheetName|
     |1|Text_Try_Editor|
     
-@queue
+@queue14
 Scenario Outline: The user is able to see the output in console with proper python code
 Given The user is on the homepage
 	When User clicks on "Get Started" link 
@@ -74,7 +74,7 @@ Given The user is on the homepage
     Then User should be navigate to "https://dsportalapp.herokuapp.com/queue/implementation-collections/" page
     Then User clicks on "Try here>>>" button 
     
-@queue
+@queue14
 Scenario Outline: The user is able to see the error message in pop up window with incorrect python code
 Given The user is on the homepage
 	When User clicks on "Get Started" link 
@@ -94,7 +94,7 @@ Given The user is on the homepage
  		|rowNumber|SheetName|
     |1|Text_Try_Editor|
     
-@queue
+@queue14
 Scenario Outline: The user is able to see the output in console with proper python code
 Given The user is on the homepage
 	When User clicks on "Get Started" link 
@@ -122,7 +122,7 @@ Given The user is on the homepage
     Then User should be navigate to "https://dsportalapp.herokuapp.com/queue/Implementation-array/" page
     Then User clicks on "Try here>>>" button 
     
-@queue
+@queue14
 Scenario Outline: The user is able to see the error message in pop up window with incorrect python code
 Given The user is on the homepage
 	When User clicks on "Get Started" link 
@@ -142,7 +142,7 @@ Given The user is on the homepage
  		|rowNumber|SheetName|
     |1|Text_Try_Editor|
     
-@queue
+@queue14
 Scenario Outline: The user is able to see the output in console with proper python code
 Given The user is on the homepage
 	When User clicks on "Get Started" link 
@@ -170,7 +170,7 @@ Given The user is on the homepage
     Then User should be navigate to "https://dsportalapp.herokuapp.com/queue/QueueOp/" page
     Then User clicks on "Try here>>>" button 
     
-@queue
+@queue14
 Scenario Outline: The user is able to see the error message in pop up window with incorrect python code
 Given The user is on the homepage
 	When User clicks on "Get Started" link 
@@ -190,7 +190,7 @@ Given The user is on the homepage
  		|rowNumber|SheetName|
     |1|Text_Try_Editor|
     
-@queue
+@queue14
 Scenario Outline: The user is able to see the output in console with proper python code
 Given The user is on the homepage
 	When User clicks on "Get Started" link 

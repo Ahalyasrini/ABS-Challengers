@@ -7,6 +7,7 @@ import java.util.Map;
 import org.junit.Assert;
 
 import dsalgoPOM.QueuePage;
+import dsalgo_driver.BaseTest;
 import dsalgo_utilities.ExcelReader;
 import dsalgo_webdriver_manager.DriverManager;
 import io.cucumber.java.en.Given;
@@ -15,7 +16,7 @@ import io.cucumber.java.en.When;
 
 public class DSalgoQueuePage extends BaseTest{
 	
-	public QueuePage queuePage = new QueuePage(getDriver());
+	public QueuePage queuePage ;
 
 	public DSalgoQueuePage() {
 		queuePage = new QueuePage(getDriver());

@@ -6,24 +6,37 @@ import org.openqa.selenium.WebDriver;
 public class LoginInpage {
 	
 	WebDriver driver;
-	 By sign_in =By.xpath("//a[@href=\"/login\"] ");
+	 By sign_in =By.xpath("//a[@href=\"/login\"]");
 	 By login_btn=By.xpath("//input[@type=\"submit\"]");
 	 By userName=By.xpath("//input[@name='username']");
 //	 By signIn=By.xpath("//a[@href=\"/login\"] ");
 	 By passWord=By.xpath("//input[@type=\"password\"]");
 	 By alertmsg=By.xpath("//div[@class=\"alert alert-primary\"]");
 	 By loginmsg=By.xpath("//div[@class=\"alert alert-primary\"]");
-	
+	 By signOut=By.xpath("//a[@href='/logout']");
 	 
 	 public LoginInpage(WebDriver driver) {
 		  this.driver=driver;
 	 }
 	 
-	 public void clicksign_in() {
+	 public void clicksign_in() throws InterruptedException {
 		 System.out.println("******************************Before sing in **************************************");
-		 driver.findElement(sign_in).click();
-		 System.out.println("******************************After sing in **************************************");
+//		 do {
+//			 if(driver.findElements(sign_in).size()>0) {
+//				 driver.findElement(sign_in).click();
+//				 Thread.sleep(5000);
+//			 }
+//		 }while(driver.findElements(sign_in).size()>0);
+		 Thread.sleep(5000);
+		 while(driver.findElements(By.xpath("//a[@href='/logout']")).size() > 0 ) {
+			 driver.findElement(By.xpath("//a[@href='/logout']")).click();
+		 }
 		 
+		 driver.findElement(sign_in).click();
+		 
+		 Thread.sleep(5000);
+		 System.out.println("******************************After sing in **************************************");
+
 		  }
 	 
 	 public void clicklogin() {
