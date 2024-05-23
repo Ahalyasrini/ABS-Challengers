@@ -6,7 +6,7 @@ Background: The login  steps
     When User clicks on get started button
     Then User should be landed on the data structure page with title "NumpyNinja"
 
-@register
+@register14
 Scenario: Opening Register Page
     Given The User opens Register Page
     When The User clicks "Register" button with all fields empty

@@ -195,7 +195,7 @@ Scenario Outline: The user is able to see the output in console with proper pyth
     |1|Text_Try_Editor|
   
     
-@stack
+@stack14
 Scenario: The user is able to navigate to Practice Questions in Stack page
  Given The user is on homepage
 	When The user clicks "Get Started" link

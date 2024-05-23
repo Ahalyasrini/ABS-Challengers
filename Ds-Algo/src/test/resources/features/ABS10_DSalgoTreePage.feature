@@ -13,7 +13,7 @@ Feature: DSalgo treePage
   
   
   
-  @treePage
+  @treePage14
   Scenario: validating treePage
      Given USER is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the treeList and verify pagetitle
@@ -70,7 +70,7 @@ Feature: DSalgo treePage
       | rowNumber | sheetName       | message                                          |
       |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
     
-    @treePage
+    @treePage11
     Scenario Outline: validating Tree Traversals of trees  Page
     Given USER is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the treeList and verify pagetitle
@@ -83,10 +83,8 @@ Feature: DSalgo treePage
       | rowNumber | sheetName       | message                                          |
       |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
     
-       @treePage
+       @treePage14
     Scenario Outline: validating Traversals Illustrations  Page
-    
-    
     Given USER is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the treeList and verify pagetitle
      Given User is on Overview of trees page and verify the pagetitle
@@ -98,7 +96,7 @@ Feature: DSalgo treePage
       | rowNumber | sheetName       | message                                          |
       |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
    
-     @treePage
+     @treePage14
     Scenario Outline: validating Binary Trees  Page
     Given USER is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the treeList and verify pagetitle
@@ -113,7 +111,7 @@ Feature: DSalgo treePage
       
       
     
-      @treePage
+      @treePage14
     Scenario Outline: validating Types of Binary Trees  Page
     Given USER is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the treeList and verify pagetitle
@@ -126,7 +124,7 @@ Feature: DSalgo treePage
       | rowNumber | sheetName       | message                                          |
       |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
       
-      @treePage
+      @treePage14
     Scenario Outline: validating Implementation in Python  Page
       Given USER is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the treeList and verify pagetitle
@@ -139,7 +137,7 @@ Feature: DSalgo treePage
       | rowNumber | sheetName       | message                                          |
       |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
       
-      @treePage
+      @treePage14
     Scenario Outline: validating Binary Tree Traversals  Page
     Given USER is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the treeList and verify pagetitle
@@ -152,7 +150,7 @@ Feature: DSalgo treePage
       | rowNumber | sheetName       | message                                          |
       |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
       
-      @treePage
+      @treePage14
     Scenario Outline: validating Implementation Of Binary Trees Page
     Given USER is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the treeList and verify pagetitle
@@ -165,7 +163,7 @@ Feature: DSalgo treePage
       | rowNumber | sheetName       | message                                          |
       |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
       
-      @treePage
+      @treePage14
     Scenario Outline: validating Application Of Binary trees  Page
     Given USER is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the treeList and verify pagetitle
@@ -178,7 +176,7 @@ Feature: DSalgo treePage
       | rowNumber | sheetName       | message                                          |
       |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
       
-      @treePage
+      @treePage14
     Scenario Outline: validating Binary Search Trees Page
     Given USER is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the treeList and verify pagetitle
@@ -192,7 +190,7 @@ Feature: DSalgo treePage
       | rowNumber | sheetName       | message                                          |
       |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
       
-      @treePage
+      @treePage14
     Scenario Outline: validating  Implementation of BTS Page
     Given USER is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the treeList and verify pagetitle
@@ -206,7 +204,7 @@ Feature: DSalgo treePage
       | rowNumber | sheetName       | message                                          |
       |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
       
-             @treePage
+             @treePage14
   Scenario: validating PracticeQuestionPage
   Given USER is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the treeList and verify pagetitle

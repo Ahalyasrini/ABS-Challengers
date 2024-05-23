@@ -5,7 +5,7 @@ import static org.testng.Assert.assertEquals;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import dsalgo_stepdefinition.BaseTest;
+import dsalgo_driver.BaseTest;
 import dsalgo_webdriver_manager.DriverManager;
 
 public class RegisterPage {

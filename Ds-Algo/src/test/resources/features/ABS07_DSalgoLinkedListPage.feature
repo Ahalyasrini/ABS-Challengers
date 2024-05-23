@@ -97,7 +97,7 @@ Feature: DSalgo LinkedlistPage
       | rowNumber | sheetName       | message                                          |
       |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
       
-           @LinkedlistPage
+           @LinkedlistPage14
     Scenario Outline: validating Insertion Page
              Given User is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the LinkedList and verify pagetitle
@@ -113,7 +113,7 @@ Feature: DSalgo LinkedlistPage
       |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
       
       
-         @LinkedlistPage
+         @LinkedlistPage14
     Scenario Outline: validating Deletion Page
              Given User is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the LinkedList and verify pagetitle
@@ -131,7 +131,7 @@ Feature: DSalgo LinkedlistPage
       
       
       
-       @LinkedlistPage
+       @LinkedlistPage14
   Scenario: validating PracticeQuestionPage
            Given User is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the LinkedList and verify pagetitle

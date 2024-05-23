@@ -43,7 +43,7 @@ public class DataStructurePage extends DriverManager {
 	public DataStructurePage(WebDriver driver)
 	{
 		  this.driver=driver;
-		  wait = new WebDriverWait(this.driver,Duration.ofSeconds(10));
+		  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	public String getHomePageTitle()
 	{
@@ -82,7 +82,7 @@ public class DataStructurePage extends DriverManager {
 	}
 	public void clicktimecomplexity()
 	{
-		wait.until(ExpectedConditions.elementToBeClickable(timecomplexity));
+		//wait.until(ExpectedConditions.elementToBeClickable(timecomplexity));
 		driver.findElement(timecomplexity).click();	
 	}
 	public String getcurrentpage()

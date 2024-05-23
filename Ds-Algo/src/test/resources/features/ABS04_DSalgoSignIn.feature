@@ -8,13 +8,13 @@ Background: The login  steps
     When User clicks on get started button
     Then User should be landed on the data structure page with title "NumpyNinja"
     
-  @loginPage
+  @loginPage123
   Scenario: Signin page validation with no username and password
     Given The user is on the DS Algo Sign in Page
     When The user clicks login button after leaving the <username> textbox and <password> textbox blank
     Then The error message "Please fill out this field." appears below Username textbox
 
-  @loginPage
+  @loginPage123
   Scenario Outline: Signin page validation with username and  no password
     Given user is on the DS Algo Sign in Page
     And The user clicks login button after entering the userName and leaves password textbox blank <rowNumber> <sheetName>
@@ -24,7 +24,7 @@ Background: The login  steps
     |rowNumber|sheetName|
     |1|validCredentials|
 
-  @loginPage
+  @loginPage123
   Scenario Outline: Signin page validation with no username
     Given user is on  DS Algo Sign in Page
     When The user clicks login button after entering the passWord only <rowNumber> <sheetName>

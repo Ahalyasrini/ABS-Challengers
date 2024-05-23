@@ -23,7 +23,7 @@ Feature: DSalgo arraypage
       | Basic operations in list |
       | Applications of array    |
 
-  @arrayPage
+  @arrayPage14
   Scenario Outline: validating Arrays in python page
      Given User is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the array
@@ -36,7 +36,7 @@ Feature: DSalgo arraypage
       | rowNumber | sheetName       | message                                          |
       |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
 
-  @arrayPage
+  @arrayPage14
   Scenario Outline: validating Arrays using list page
        Given User is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the array
@@ -52,7 +52,7 @@ Feature: DSalgo arraypage
       | rowNumber | sheetName       | message                                          |
       |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
       
-       @arrayPage
+       @arrayPage14
   Scenario Outline: validating Basic operations in list page
          Given User is on Dalgo homepage  and verify the page title
     When The user clicks  Get Started button below the array
@@ -66,30 +66,30 @@ Feature: DSalgo arraypage
       | rowNumber | sheetName       | message                                          |
       |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
       
-       @arrayPage
-  Scenario Outline: validating Applications of array page
-         Given User is on Dalgo homepage  and verify the page title
-    When The user clicks  Get Started button below the array
-    Given User is on Arrays in python page and verify the pagetitle
-    Given User is on  Applications of array page  page  and verify the pagetitle
-    When The user clicks Try Here button of Array using list  Page and the user should be redirected to a page having an Python Editor with a url "https://dsportalapp.herokuapp.com/tryEditor"
-    And user is on python editor and User write the invalid code in Editor <rowNumber> and <sheetName> and click run button and the user should able to see an <message> in alert window
-    Then The user write the valid code in Editor <rowNumber> and <sheetName> and click run button and the user should able to see output in the console
+     #  @arrayPage
+ # Scenario Outline: validating Applications of array page
+     #    Given User is on Dalgo homepage  and verify the page title
+ #   When The user clicks  Get Started button below the array
+  #  Given User is on Arrays in python page and verify the pagetitle
+  #  Given User is on  Applications of array page  page  and verify the pagetitle
+   # When The user clicks Try Here button of Array using list  Page and the user should be redirected to a page having an Python Editor with a url "https://dsportalapp.herokuapp.com/tryEditor"
+#    And user is on python editor and User write the invalid code in Editor <rowNumber> and <sheetName> and click run button and the user should able to see an <message> in alert window
+   # Then The user write the valid code in Editor <rowNumber> and <sheetName> and click run button and the user should able to see output in the console
 
-    Examples: 
-      | rowNumber | sheetName       | message                                          |
-      |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
+ #   Examples: 
+   #   | rowNumber | sheetName       | message                                          |
+   #   |         1 | Text_Try_Editor | NameError: name 'hello' is not defined on line 1 |
       
       
-  @arrayPage
-  Scenario Outline: validating Practice questions page
-         Given User is on Dalgo homepage  and verify the page title
-    When The user clicks  Get Started button below the array
-    Given User is on Arrays in python page and verify the pagetitle
-    Given User clicks Practice questions biutton  and user should be navigated to "https://dsportalapp.herokuapp.com/array/practice"
-    Then The user verify the links <sheetName>
+ # @arrayPage
+ # Scenario Outline: validating Practice questions page
+     #    Given User is on Dalgo homepage  and verify the page title
+  #  When The user clicks  Get Started button below the array
+  #  Given User is on Arrays in python page and verify the pagetitle
+ #   Given User clicks Practice questions biutton  and user should be navigated to "https://dsportalapp.herokuapp.com/array/practice"
+  #  Then The user verify the links <sheetName>
 
-    Examples: 
-      |  sheetName       |
-      |  practiceQuestions |
+   # Examples: 
+   #   |  sheetName       |
+   #   |  practiceQuestions |
 

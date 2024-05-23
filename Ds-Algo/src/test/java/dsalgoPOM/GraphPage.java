@@ -37,6 +37,7 @@ public class GraphPage {
 	
 	public GraphPage (WebDriver driver){
 		this.driver = driver;
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));	 	
 		wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 	}
 	
@@ -160,4 +161,9 @@ public void clickHyperLink(String argument) {
 		driver.findElement(signOut).click();
 	}
 
+public int clickSignOutSize() {
+		
+		return driver.findElements(signOut).size();
+	}
+	
 }

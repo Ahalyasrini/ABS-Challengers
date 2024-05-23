@@ -7,6 +7,7 @@ import java.util.Map;
 import org.testng.Assert;
 
 import dsalgoPOM.LoginInpage;
+import dsalgo_driver.BaseTest;
 import dsalgo_utilities.ExcelReader;
 import dsalgo_webdriver_manager.DriverManager;
 import io.cucumber.java.en.And;
@@ -22,7 +23,7 @@ public class DSalgoLoginInpage extends BaseTest {
 		login= new LoginInpage(getDriver());
 	}
 	@Given("The user is on the DS Algo Sign in Page")
-	public void the_user_is_on_the_ds_algo_sign_in_page() {
+	public void the_user_is_on_the_ds_algo_sign_in_page() throws InterruptedException {
 	   login.clicksign_in();
 	}
 
@@ -40,7 +41,7 @@ public class DSalgoLoginInpage extends BaseTest {
 	}
 
 	@Given("user is on the DS Algo Sign in Page")
-	public void user_is_on_the_ds_algo_sign_in_page2() {
+	public void user_is_on_the_ds_algo_sign_in_page2() throws InterruptedException {
 	   login.clicksign_in();
 	}
 
@@ -64,7 +65,7 @@ public class DSalgoLoginInpage extends BaseTest {
 	}
 
 	@Given("user is on  DS Algo Sign in Page")
-	public void user_is_on_ds_algo_sign_in_page3() {
+	public void user_is_on_ds_algo_sign_in_page3() throws InterruptedException {
 	    login.clicksign_in();
 	}
 
@@ -88,7 +89,7 @@ public class DSalgoLoginInpage extends BaseTest {
 	}
 
 	@Given("user lands on DS Algo Sign in page")
-	public void user_lands_on_ds_algo_dign_in_page() {
+	public void user_lands_on_ds_algo_dign_in_page() throws InterruptedException {
 		login.clicksign_in();
 	    }
 

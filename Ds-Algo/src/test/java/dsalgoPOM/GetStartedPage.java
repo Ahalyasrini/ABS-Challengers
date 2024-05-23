@@ -1,5 +1,6 @@
 package dsalgoPOM;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -20,7 +21,7 @@ public class GetStartedPage {
 public GetStartedPage(WebDriver driver)
 {
 	 this.driver=driver;
-	 	 	 
+	 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));	 	 
 }
 
 public String getpageTitle()

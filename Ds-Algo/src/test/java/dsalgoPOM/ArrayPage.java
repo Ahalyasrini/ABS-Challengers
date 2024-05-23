@@ -17,7 +17,7 @@ import dsalgo_commonlibraries.CommonLibraries;
 import dsalgo_utilities.ExcelReader;
 
 public class ArrayPage {
-    WebDriver driver;
+    public WebDriver driver;
     By getStartedarraybtn=By.xpath("//a[@href=\"array\"]");
 	By arraytitle=By.xpath("//h4[@class=\"bg-secondary text-white\"]");
 	By arrayinpython=By.xpath("//a[@href=\"arrays-in-python\"]");
@@ -41,7 +41,7 @@ public class ArrayPage {
 	By getstartedbtn1=By.xpath("//a[@href=\"/home\"]");
 	
 	
-	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+	public WebDriverWait wait ;
 
 WebElement txtarea;
 Alert alert ;
@@ -49,6 +49,8 @@ Alert alert ;
 	 public ArrayPage(WebDriver driver)
 	 {
 		  this.driver=driver;
+		  this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+		  wait = new WebDriverWait(this.driver,Duration.ofSeconds(10));
 	 }
 	 
 	 public void getpageTitle()
@@ -132,6 +134,7 @@ Alert alert ;
 	}
 	public void navigateback()
 	{
+
 		driver.navigate().back();
 		
 	}
