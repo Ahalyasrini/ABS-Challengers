@@ -8,6 +8,13 @@
 			</class>
 		</classes>
 	</test>
+	<test name="Chrome Array Execution">
+	<parameter name="browserName" value="chrome"/>
+		<classes>
+			<class name="dsalgo_stepdefinition.ArraysTestRunner">
+			</class>
+		</classes>
+	</test>
 	<test name="Edge Parallel Execution">
 	<parameter name="browserName" value="edge"/>
 		<classes>

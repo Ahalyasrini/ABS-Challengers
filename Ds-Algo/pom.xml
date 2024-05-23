@@ -16,6 +16,9 @@
               <goal>integration-test</goal>
               <goal>verify</goal>
             </goals>
+            <configuration>
+                <perCoreThreadCount>false</perCoreThreadCount>
+            </configuration>
           </execution>
         </executions>
       </plugin>
