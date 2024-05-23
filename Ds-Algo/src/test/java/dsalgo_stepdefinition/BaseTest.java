@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -29,13 +30,15 @@ public class BaseTest {
 
 	public void setupDriver() {
 		if(getDriver()==null){
-			if(prop.getProperty("browser").equalsIgnoreCase("chrome")){
+			String browserType = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("browserName");
+			System.out.println("BrowserType="+browserType);
+			if(browserType.equalsIgnoreCase("chrome")){
 				WebDriverManager.chromedriver().setup();
 				setDriver(new ChromeDriver());
-				}else if(prop.getProperty("browser").equalsIgnoreCase("firefox")){
+				}else if(browserType.equalsIgnoreCase("firefox")){
 					WebDriverManager.firefoxdriver().setup();
 					setDriver(new FirefoxDriver());
-					}else if(prop.getProperty("browser").equalsIgnoreCase("Edge")){
+					}else if(browserType.equalsIgnoreCase("Edge")){
 						WebDriverManager.edgedriver().setup();
 						setDriver(new EdgeDriver());
 						}
