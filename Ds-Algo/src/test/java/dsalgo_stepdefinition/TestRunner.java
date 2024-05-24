@@ -11,8 +11,16 @@ import io.cucumber.testng.CucumberOptions;
 //@RunWith(Cucumber.class)
 @CucumberOptions(
 //		plugin = {"pretty", "html:target/Ahalya123.html"}, //reporting purpose
-		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-		monochrome=false,  //console output colour
+		 plugin={"pretty",
+	    		  "html:target/Ahalya123.html",
+	   		  "json:target/report.json",
+	   		  "junit:target/report.xml",
+	   		  "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+	    		  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+	    		  "timeline:test-output-thread/"},
+	    		 
+	//	plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+		//monochrome=false,  //console output colour
 //				tags = "@homePage",
 	//	tags = "@stack or @queue or @homePage or @register or @loginPage or @DataStructure or @arrayPage or @LinkedlistPage ",
 	tags = "@homePage or @homePage14 or @register or @loginPage or @DataStructure or @arrayPage or @LinkedlistPage or @stack or @queue or "
