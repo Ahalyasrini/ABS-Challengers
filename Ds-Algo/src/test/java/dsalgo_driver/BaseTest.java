@@ -17,32 +17,27 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 	
 	public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-//	public static ThreadLocal<RemoteWebDriver > driver = new ThreadLocal<>();
 	public Properties prop;
 	public static String url;
 	
 	public void setDriver(WebDriver driver) {
 		this. driver.set(driver);
-	}
-	
+		}
 	public WebDriver getDriver() {
 		return this.driver.get();
-	}
-
+		}
 	public void setupDriver(String browser) {
 		if(getDriver()==null){
-//			if(prop.getProperty("browser").equalsIgnoreCase("chrome")){
-			if(browser.equalsIgnoreCase("chrome")){
+				if(browser.equalsIgnoreCase("chrome")){
 				WebDriverManager.chromedriver().setup();
-//				System.setProperty("webdriver.Chrome.driver","\\src\\test\\resources\\drivers\\chromedriver.exe");
 				setDriver(new ChromeDriver());
 				}else if(prop.getProperty("browser").equalsIgnoreCase("firefox")){
-					WebDriverManager.firefoxdriver().setup();
-					setDriver(new FirefoxDriver());
-					}else if(browser.equalsIgnoreCase("Edge")){
-						WebDriverManager.edgedriver().setup();
-						setDriver(new EdgeDriver());
-						}
+				WebDriverManager.firefoxdriver().setup();
+				setDriver(new FirefoxDriver());
+				}else if(browser.equalsIgnoreCase("Edge")){
+				WebDriverManager.edgedriver().setup();
+				setDriver(new EdgeDriver());
+				}
 			}
 		}
 	

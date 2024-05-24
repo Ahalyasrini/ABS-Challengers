@@ -29,12 +29,13 @@ public class Hooks extends BaseTest {
 	
 	int stepCounter = 0;
 	
+	//
+	
 	@Before
 //	@Parameters("browser")
     public void beforeScenario(Scenario scenario){
 		System.out.println(scenario.getStatus());
         System.out.println(" Code is currently running before scenario : " + scenario.getName());
-//        System.out.println(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("browser"));
         driverInitializer(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("browser"));
         graphPage = new GraphPage(getDriver());
     }
