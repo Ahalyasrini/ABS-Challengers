@@ -40,6 +40,9 @@
 
             </property>
          </properties>
+         <suiteXmlFiles>
+            <suiteXmlFile>xmlConfigFiles/testng.xml</suiteXmlFile>
+        </suiteXmlFiles>
       </configuration>
         </plugin>
         

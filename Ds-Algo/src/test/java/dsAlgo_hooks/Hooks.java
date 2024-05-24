@@ -35,8 +35,7 @@ public class Hooks extends BaseTest {
 		System.out.println(scenario.getStatus());
         System.out.println(" Code is currently running before scenario : " + scenario.getName());
 //        System.out.println(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("browser"));
-//        driverInitializer(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("browser"));
-        driverInitializer("Chrome");
+        driverInitializer(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("browser"));
         graphPage = new GraphPage(getDriver());
     }
 	
