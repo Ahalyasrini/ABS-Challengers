@@ -10,7 +10,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-		plugin = {"pretty", "html:target/Ahalya123.html"}, //reporting purpose
+//		plugin = {"pretty", "html:target/Ahalya123.html"}, //reporting purpose
+		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 		monochrome=false,  //console output colour
 	//	tags = "@stack or @queue or @homePage or @register or @loginPage or @DataStructure or @arrayPage or @LinkedlistPage ",
 	tags = "@homePage or @homePage14 or @register or @loginPage or @DataStructure or @arrayPage or @LinkedlistPage or @stack or @queue or "
